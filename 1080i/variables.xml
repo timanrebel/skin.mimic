@@ -358,7 +358,7 @@
 		<value condition="Skin.HasSetting(WidgetStyle)">$LOCALIZE[31059]</value>
 		<value>$LOCALIZE[31079]</value>
 	</variable>
-	
+
 	<variable name="RatingFlagVar">
 		<value condition="SubString(ListItem.mpaa,US:G) | SubString(ListItem.mpaa,USA:G) | SubString(ListItem.mpaa,Rated G)">flags/mpaa/G.png</value>
 		<value condition="SubString(ListItem.mpaa,PG-13)">flags/mpaa/PG-13.png</value>
@@ -647,7 +647,7 @@
         <value>$INFO[ListItem.Icon]</value>
     </variable>
     <variable name="TopbarFadeLabel1">
-    	<value condition="![Player.Playing | Player.HasAudio | Player.HasVideo] | Window.IsActive(tvchannels)">$INFO[Weather.Temperature,, • ]$INFO[System.Time]</value>
+    	<value condition="![Player.Playing | Player.HasAudio | Player.HasVideo] | Window.IsActive(tvchannels)">$INFO[System.Time]</value>
     	<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,X,. ]$INFO[Player.Title]</value>
     	<value>$INFO[Player.Title]</value>
     </variable>

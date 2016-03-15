@@ -131,6 +131,12 @@
 			<size>32</size>
 		</font>
 		<font>
+			<name>topbar_title</name>
+			<filename>weblysleekuil.ttf</filename>
+			<style>uppercase</style>
+			<size>64</size>
+		</font>
+		<font>
 			<name>font15_title</name>
 			<filename>weblysleekuil.ttf</filename>
 			<style>uppercase</style>
@@ -164,7 +170,7 @@
 			<name>font_MainMenu</name>
 			<filename>weblysleekuil.ttf</filename>
 			<linespacing>0</linespacing>
-			<style>uppercase</style>
+			<style>bold uppercase</style>
 			<size>65</size>
 		</font>
 		<font>

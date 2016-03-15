@@ -141,10 +141,10 @@
 							<left>135</left>
 							<top>5</top>
 							<width>35</width>
-							<height>70</height>
+							<height>100</height>
 							<font>IconTiny</font>
-							<textcolor>$VAR[ColorTextVar]</textcolor>
-							<selectedcolor>$VAR[ColorTextVar]</selectedcolor>
+							<textcolor>$VAR[ColorHighlightVar]</textcolor>
+							<selectedcolor>$VAR[ColorHighlightVar]</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label></label>
@@ -160,7 +160,33 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$VAR[ListMainLabelVar]</label>
-							<visible>!ListItem.IsPlaying</visible>
+							<visible>!Container.Content(songs) + !Container.Content(albums) + !ListItem.IsPlaying</visible>
+						</control>
+						<control type="label">
+							<left>135</left>
+							<top>3</top>
+							<width>790</width>
+							<height>100</height>
+							<font>font35_title</font>
+							<textcolor>$VAR[ColorTextVar]</textcolor>
+							<selectedcolor>$VAR[ColorTextVar]</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$VAR[ListMainLabelVar]</label>
+							<visible>Container.Content(albums) + !ListItem.IsPlaying</visible>
+						</control>
+						<control type="label">
+							<left>135</left>
+							<top>3</top>
+							<width>790</width>
+							<height>100</height>
+							<font>font35_title</font>
+							<textcolor>$VAR[ColorTextVar]</textcolor>
+							<selectedcolor>$VAR[ColorTextVar]</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$VAR[ListMainLabelVar]</label>
+							<visible>Container.Content(songs) + !ListItem.IsPlaying</visible>
 						</control>
 						<control type="label">
 							<left>170</left>
@@ -168,12 +194,25 @@
 							<width>755</width>
 							<height>70</height>
 							<font>font30</font>
-							<textcolor>$VAR[ColorTextVar]</textcolor>
-							<selectedcolor>$VAR[ColorTextVar]</selectedcolor>
+							<textcolor>$VAR[ColorHighlightVar]</textcolor>
+							<selectedcolor>$VAR[ColorHighlightVar]</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$VAR[ListMainLabelVar]</label>
-							<visible>ListItem.IsPlaying</visible>
+							<visible>!Container.Content(songs) + ListItem.IsPlaying</visible>
+						</control>
+						<control type="label">
+							<left>175</left>
+							<top>3</top>
+							<width>790</width>
+							<height>100</height>
+							<font>font35_title</font>
+							<textcolor>$VAR[ColorHighlightVar]</textcolor>
+							<selectedcolor>$VAR[ColorHighlightVar]</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$VAR[ListMainLabelVar]</label>
+							<visible>Container.Content(songs) + ListItem.IsPlaying</visible>
 						</control>
 						<control type="label">
 							<left>135</left>
@@ -186,6 +225,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$VAR[ListSubLabelVar]</label>
+							<visible>!Container.Content(songs) + !Container.Content(albums)</visible>
 						</control>
 						<control type="label">
 							<left>60</left>
@@ -197,7 +237,7 @@
 							<selectedcolor>$VAR[ColorTextVar]</selectedcolor>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label2]</label>
-							<visible>Container.Content(addons) | Container.Content(songs)</visible>
+							<visible>Container.Content(addons)</visible>
 						</control>
 						<control type="label">
 							<left>0</left>

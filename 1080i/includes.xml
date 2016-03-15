@@ -648,8 +648,8 @@
 						<left>102</left>
 						<top>17</top>
 						<width>1715</width>
-						<height>45</height>
-						<font>font28_title</font>
+						<height>80</height>
+						<font>topbar_title</font>
 						<textoffsetx>15</textoffsetx>
 						<textcolor>$VAR[ColorTextVar]</textcolor>
 						<align>left</align>
@@ -658,7 +658,7 @@
 						<label2>$VAR[TopbarFadeLabel1]</label2>
 						<onclick>noop</onclick>
 					</control>
-					<control type="button">
+					<!-- <control type="button">
 						<left>102</left>
 						<top>59</top>
 						<width>1715</width>
@@ -671,7 +671,7 @@
 						<label>$VAR[HeaderSubLabel]</label>
 						<label2>$VAR[TopbarFadeLabel2]</label2>
 						<onclick>noop</onclick>
-					</control>
+					</control> -->
 				</control>
 			</control>
 			<control type="image">
