@@ -1,0 +1,1968 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<includes>
+	<include name="skinshortcuts-mainmenu">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[10005]</label>
+			<label2>Common Shortcut</label2>
+			<icon>DefaultMusicSongs.png</icon>
+			<thumb>DefaultMusicAlbums.png</thumb>
+			<property name="labelID">music</property>
+			<property name="defaultID">music</property>
+			<onclick>ActivateWindow(Music)</onclick>
+			<property name="path">ActivateWindow(Music)</property>
+			<property name="list">Music</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">music</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>Artists</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">artists</property>
+			<property name="defaultID" />
+			<visible>Library.HasContent(Music)</visible>
+			<onclick>ActivateWindow(Music,library://music/artists.xml,return)</onclick>
+			<property name="path">ActivateWindow(Music,library://music/artists.xml,return)</property>
+			<property name="list">library://music/artists.xml</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">artists</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>Albums</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">albums</property>
+			<property name="defaultID" />
+			<visible>Library.HasContent(Music)</visible>
+			<onclick>ActivateWindow(Music,library://music/albums.xml,return)</onclick>
+			<property name="path">ActivateWindow(Music,library://music/albums.xml,return)</property>
+			<property name="list">library://music/albums.xml</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">albums</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
+			<label>$ADDON[script.skinshortcuts 32087]</label>
+			<label2>Common Shortcut</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">radio</property>
+			<property name="defaultID">radio</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioGuide)</onclick>
+			<property name="path">ActivateWindow(RadioGuide)</property>
+			<property name="list">RadioGuide</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">radio</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
+			<label>$LOCALIZE[24001]</label>
+			<label2>Settings</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">24001</property>
+			<property name="defaultID">24001</property>
+			<onclick>ActivateWindow(AddonBrowser)</onclick>
+			<property name="path">ActivateWindow(AddonBrowser)</property>
+			<property name="list">AddonBrowser</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">num-24001</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUM[6]</property>
+			<label>$LOCALIZE[13000]</label>
+			<label2>Common Shortcut</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">13000</property>
+			<property name="defaultID">13000</property>
+			<onclick>ActivateWindow(Settings)</onclick>
+			<property name="path">ActivateWindow(Settings)</property>
+			<property name="list">Settings</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">num-13000</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+		</item>
+	</include>
+	<include />
+	<include name="skinshortcuts-submenu">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[133]</label>
+			<label2>Music</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb>DefaultMusicArtists.png</thumb>
+			<property name="labelID">133</property>
+			<property name="defaultID">133</property>
+			<onclick>ActivateWindow(Music,Artists,return)</onclick>
+			<property name="path">ActivateWindow(Music,Artists,return)</property>
+			<property name="list">Artists</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$LOCALIZE[132]</label>
+			<label2>Music</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb>DefaultMusicAlbums.png</thumb>
+			<property name="labelID">132</property>
+			<property name="defaultID">132</property>
+			<onclick>ActivateWindow(Music,Albums,return)</onclick>
+			<property name="path">ActivateWindow(Music,Albums,return)</property>
+			<property name="list">Albums</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>Recently Added</label>
+			<label2>Music</label2>
+			<icon>DefaultMusicRecentlyAdded.png</icon>
+			<thumb />
+			<property name="labelID">31705</property>
+			<property name="defaultID">31705</property>
+			<onclick>ActivateWindow(Music,RecentlyAddedAlbums,return)</onclick>
+			<property name="path">ActivateWindow(Music,RecentlyAddedAlbums,return)</property>
+			<property name="list">RecentlyAddedAlbums</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
+			<label>Recently Played</label>
+			<label2>Music</label2>
+			<icon>DefaultMusicRecentlyPlayed.png</icon>
+			<thumb />
+			<property name="labelID">31016</property>
+			<property name="defaultID">31016</property>
+			<onclick>ActivateWindow(Music,RecentlyPlayedAlbums,return)</onclick>
+			<property name="path">ActivateWindow(Music,RecentlyPlayedAlbums,return)</property>
+			<property name="list">RecentlyPlayedAlbums</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
+			<label>$LOCALIZE[136]</label>
+			<label2>Music</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb>DefaultMusicPlaylists.png</thumb>
+			<property name="labelID">136</property>
+			<property name="defaultID">136</property>
+			<onclick>ActivateWindow(Music,Playlists,return)</onclick>
+			<property name="path">ActivateWindow(Music,Playlists,return)</property>
+			<property name="list">Playlists</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUM[6]</property>
+			<label>$LOCALIZE[20389]</label>
+			<label2>Common Shortcut</label2>
+			<icon>DefaultMusicVideos.png</icon>
+			<thumb />
+			<property name="labelID">musicvideos</property>
+			<property name="defaultID">musicvideos</property>
+			<onclick>ActivateWindow(Videos,videodb://musicvideos/titles/,return)</onclick>
+			<property name="path">ActivateWindow(Videos,videodb://musicvideos/titles/,return)</property>
+			<property name="list">videodb://musicvideos/titles/</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="7">
+			<property name="id">$NUM[7]</property>
+			<label>$LOCALIZE[24001]</label>
+			<label2>Music</label2>
+			<icon>DefaultAddonMusic.png</icon>
+			<thumb />
+			<property name="labelID">24001</property>
+			<property name="defaultID">24001</property>
+			<onclick>ActivateWindow(Music,Addons,return)</onclick>
+			<property name="path">ActivateWindow(Music,Addons,return)</property>
+			<property name="list">Addons</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[19019]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<thumb />
+			<property name="labelID">19019</property>
+			<property name="defaultID">19019</property>
+			<visible>[PVR.HasRadioChannels] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),radio)</visible>
+			<onclick>ActivateWindow(RadioChannels)</onclick>
+			<property name="path">ActivateWindow(RadioChannels)</property>
+			<property name="list">RadioChannels</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">radio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$LOCALIZE[22020]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<thumb />
+			<property name="labelID">22020</property>
+			<property name="defaultID">22020</property>
+			<visible>[PVR.HasRadioChannels] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),radio)</visible>
+			<onclick>ActivateWindow(RadioGuide)</onclick>
+			<property name="path">ActivateWindow(RadioGuide)</property>
+			<property name="list">RadioGuide</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">radio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>$LOCALIZE[19163]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<thumb />
+			<property name="labelID">19163</property>
+			<property name="defaultID">19163</property>
+			<visible>[PVR.HasRadioChannels] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),radio)</visible>
+			<onclick>ActivateWindow(RadioRecordings)</onclick>
+			<property name="path">ActivateWindow(RadioRecordings)</property>
+			<property name="list">RadioRecordings</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">radio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
+			<label>$LOCALIZE[19040]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<thumb />
+			<property name="labelID">19040</property>
+			<property name="defaultID">19040</property>
+			<visible>[PVR.HasRadioChannels] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),radio)</visible>
+			<onclick>ActivateWindow(RadioTimers)</onclick>
+			<property name="path">ActivateWindow(RadioTimers)</property>
+			<property name="list">RadioTimers</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">radio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
+			<label>$LOCALIZE[137]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<thumb />
+			<property name="labelID">137</property>
+			<property name="defaultID">137</property>
+			<visible>[PVR.HasRadioChannels] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),radio)</visible>
+			<onclick>ActivateWindow(RadioSearch)</onclick>
+			<property name="path">ActivateWindow(RadioSearch)</property>
+			<property name="list">RadioSearch</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">radio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[0]</label>
+			<label2>Shortcut</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb />
+			<property name="labelID">0</property>
+			<property name="defaultID">0</property>
+			<onclick>ActivateWindow(Programs,return)</onclick>
+			<property name="path">ActivateWindow(Programs,return)</property>
+			<property name="list">Programs</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-24001)</visible>
+			<property name="group">24001</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$LOCALIZE[24033]</label>
+			<label2>Shortcut</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">24033</property>
+			<property name="defaultID">24033</property>
+			<onclick>ActivateWindow(Addonbrowser,addons://repos/,return)</onclick>
+			<property name="path">ActivateWindow(Addonbrowser,addons://repos/,return)</property>
+			<property name="list">addons://repos/</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-24001)</visible>
+			<property name="group">24001</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[10004]</label>
+			<label2>Settings</label2>
+			<icon>DefaultIconSettings.png</icon>
+			<thumb />
+			<property name="labelID">settings</property>
+			<property name="defaultID">settings</property>
+			<onclick>ActivateWindow(Settings)</onclick>
+			<property name="path">ActivateWindow(Settings)</property>
+			<property name="list">Settings</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-13000)</visible>
+			<property name="group">13000</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>Customize home</label>
+			<label2>Common Shortcut</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">31210</property>
+			<property name="defaultID">31210</property>
+			<onclick>RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</onclick>
+			<property name="path">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</property>
+			<property name="list">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-13000)</visible>
+			<property name="group">13000</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>$LOCALIZE[13009]</label>
+			<label2>XBMC Command</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">13009</property>
+			<property name="defaultID">13009</property>
+			<onclick>ActivateWindow(shutdownmenu)</onclick>
+			<property name="path">ActivateWindow(shutdownmenu)</property>
+			<property name="list">shutdownmenu</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-13000)</visible>
+			<property name="group">13000</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-allmenus">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[10005]</label>
+			<label2>Common Shortcut</label2>
+			<icon>DefaultMusicSongs.png</icon>
+			<thumb>DefaultMusicAlbums.png</thumb>
+			<property name="labelID">music</property>
+			<property name="defaultID">music</property>
+			<onclick condition="StringCompare(Window(10000).Property(submenuVisibility),music)">ActivateWindow(Music)</onclick>
+			<property name="path">ActivateWindow(Music)</property>
+			<property name="list">Music</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">music</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+			<onclick>SetProperty(submenuVisibility,music,10000)</onclick>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[133]</label>
+			<label2>Music</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb>DefaultMusicArtists.png</thumb>
+			<property name="labelID">133</property>
+			<property name="defaultID">133</property>
+			<onclick>ActivateWindow(Music,Artists,return)</onclick>
+			<property name="path">ActivateWindow(Music,Artists,return)</property>
+			<property name="list">Artists</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">music</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$LOCALIZE[132]</label>
+			<label2>Music</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb>DefaultMusicAlbums.png</thumb>
+			<property name="labelID">132</property>
+			<property name="defaultID">132</property>
+			<onclick>ActivateWindow(Music,Albums,return)</onclick>
+			<property name="path">ActivateWindow(Music,Albums,return)</property>
+			<property name="list">Albums</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">music</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>Recently Added</label>
+			<label2>Music</label2>
+			<icon>DefaultMusicRecentlyAdded.png</icon>
+			<thumb />
+			<property name="labelID">31705</property>
+			<property name="defaultID">31705</property>
+			<onclick>ActivateWindow(Music,RecentlyAddedAlbums,return)</onclick>
+			<property name="path">ActivateWindow(Music,RecentlyAddedAlbums,return)</property>
+			<property name="list">RecentlyAddedAlbums</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">music</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
+			<label>Recently Played</label>
+			<label2>Music</label2>
+			<icon>DefaultMusicRecentlyPlayed.png</icon>
+			<thumb />
+			<property name="labelID">31016</property>
+			<property name="defaultID">31016</property>
+			<onclick>ActivateWindow(Music,RecentlyPlayedAlbums,return)</onclick>
+			<property name="path">ActivateWindow(Music,RecentlyPlayedAlbums,return)</property>
+			<property name="list">RecentlyPlayedAlbums</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">music</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
+			<label>$LOCALIZE[136]</label>
+			<label2>Music</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb>DefaultMusicPlaylists.png</thumb>
+			<property name="labelID">136</property>
+			<property name="defaultID">136</property>
+			<onclick>ActivateWindow(Music,Playlists,return)</onclick>
+			<property name="path">ActivateWindow(Music,Playlists,return)</property>
+			<property name="list">Playlists</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">music</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUM[6]</property>
+			<label>$LOCALIZE[20389]</label>
+			<label2>Common Shortcut</label2>
+			<icon>DefaultMusicVideos.png</icon>
+			<thumb />
+			<property name="labelID">musicvideos</property>
+			<property name="defaultID">musicvideos</property>
+			<onclick>ActivateWindow(Videos,videodb://musicvideos/titles/,return)</onclick>
+			<property name="path">ActivateWindow(Videos,videodb://musicvideos/titles/,return)</property>
+			<property name="list">videodb://musicvideos/titles/</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">music</property>
+		</item>
+		<item id="7">
+			<property name="id">$NUM[7]</property>
+			<label>$LOCALIZE[24001]</label>
+			<label2>Music</label2>
+			<icon>DefaultAddonMusic.png</icon>
+			<thumb />
+			<property name="labelID">24001</property>
+			<property name="defaultID">24001</property>
+			<onclick>ActivateWindow(Music,Addons,return)</onclick>
+			<property name="path">ActivateWindow(Music,Addons,return)</property>
+			<property name="list">Addons</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">music</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>Artists</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">artists</property>
+			<property name="defaultID" />
+			<visible>Library.HasContent(Music)</visible>
+			<onclick>ActivateWindow(Music,library://music/artists.xml,return)</onclick>
+			<property name="path">ActivateWindow(Music,library://music/artists.xml,return)</property>
+			<property name="list">library://music/artists.xml</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">artists</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>Albums</label>
+			<label2>Custom item</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">albums</property>
+			<property name="defaultID" />
+			<visible>Library.HasContent(Music)</visible>
+			<onclick>ActivateWindow(Music,library://music/albums.xml,return)</onclick>
+			<property name="path">ActivateWindow(Music,library://music/albums.xml,return)</property>
+			<property name="list">library://music/albums.xml</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">albums</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
+			<label>$ADDON[script.skinshortcuts 32087]</label>
+			<label2>Common Shortcut</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">radio</property>
+			<property name="defaultID">radio</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick condition="StringCompare(Window(10000).Property(submenuVisibility),radio)">ActivateWindow(RadioGuide)</onclick>
+			<property name="path">ActivateWindow(RadioGuide)</property>
+			<property name="list">RadioGuide</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">radio</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+			<onclick>SetProperty(submenuVisibility,radio,10000)</onclick>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[19019]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<thumb />
+			<property name="labelID">19019</property>
+			<property name="defaultID">19019</property>
+			<visible>[PVR.HasRadioChannels] + StringCompare(Window(10000).Property(submenuVisibility),radio)</visible>
+			<onclick>ActivateWindow(RadioChannels)</onclick>
+			<property name="path">ActivateWindow(RadioChannels)</property>
+			<property name="list">RadioChannels</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">radio</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">radio</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$LOCALIZE[22020]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<thumb />
+			<property name="labelID">22020</property>
+			<property name="defaultID">22020</property>
+			<visible>[PVR.HasRadioChannels] + StringCompare(Window(10000).Property(submenuVisibility),radio)</visible>
+			<onclick>ActivateWindow(RadioGuide)</onclick>
+			<property name="path">ActivateWindow(RadioGuide)</property>
+			<property name="list">RadioGuide</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">radio</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">radio</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>$LOCALIZE[19163]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<thumb />
+			<property name="labelID">19163</property>
+			<property name="defaultID">19163</property>
+			<visible>[PVR.HasRadioChannels] + StringCompare(Window(10000).Property(submenuVisibility),radio)</visible>
+			<onclick>ActivateWindow(RadioRecordings)</onclick>
+			<property name="path">ActivateWindow(RadioRecordings)</property>
+			<property name="list">RadioRecordings</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">radio</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">radio</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
+			<label>$LOCALIZE[19040]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<thumb />
+			<property name="labelID">19040</property>
+			<property name="defaultID">19040</property>
+			<visible>[PVR.HasRadioChannels] + StringCompare(Window(10000).Property(submenuVisibility),radio)</visible>
+			<onclick>ActivateWindow(RadioTimers)</onclick>
+			<property name="path">ActivateWindow(RadioTimers)</property>
+			<property name="list">RadioTimers</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">radio</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">radio</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
+			<label>$LOCALIZE[137]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<thumb />
+			<property name="labelID">137</property>
+			<property name="defaultID">137</property>
+			<visible>[PVR.HasRadioChannels] + StringCompare(Window(10000).Property(submenuVisibility),radio)</visible>
+			<onclick>ActivateWindow(RadioSearch)</onclick>
+			<property name="path">ActivateWindow(RadioSearch)</property>
+			<property name="list">RadioSearch</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">radio</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">radio</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
+			<label>$LOCALIZE[24001]</label>
+			<label2>Settings</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">24001</property>
+			<property name="defaultID">24001</property>
+			<onclick condition="StringCompare(Window(10000).Property(submenuVisibility),num-24001)">ActivateWindow(AddonBrowser)</onclick>
+			<property name="path">ActivateWindow(AddonBrowser)</property>
+			<property name="list">AddonBrowser</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">num-24001</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+			<onclick>SetProperty(submenuVisibility,num-24001,10000)</onclick>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[0]</label>
+			<label2>Shortcut</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb />
+			<property name="labelID">0</property>
+			<property name="defaultID">0</property>
+			<onclick>ActivateWindow(Programs,return)</onclick>
+			<property name="path">ActivateWindow(Programs,return)</property>
+			<property name="list">Programs</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),num-24001)</visible>
+			<property name="group">24001</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">num-24001</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$LOCALIZE[24033]</label>
+			<label2>Shortcut</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">24033</property>
+			<property name="defaultID">24033</property>
+			<onclick>ActivateWindow(Addonbrowser,addons://repos/,return)</onclick>
+			<property name="path">ActivateWindow(Addonbrowser,addons://repos/,return)</property>
+			<property name="list">addons://repos/</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),num-24001)</visible>
+			<property name="group">24001</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">num-24001</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUM[6]</property>
+			<label>$LOCALIZE[13000]</label>
+			<label2>Common Shortcut</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">13000</property>
+			<property name="defaultID">13000</property>
+			<onclick condition="StringCompare(Window(10000).Property(submenuVisibility),num-13000)">ActivateWindow(Settings)</onclick>
+			<property name="path">ActivateWindow(Settings)</property>
+			<property name="list">Settings</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">num-13000</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+			<onclick>SetProperty(submenuVisibility,num-13000,10000)</onclick>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[10004]</label>
+			<label2>Settings</label2>
+			<icon>DefaultIconSettings.png</icon>
+			<thumb />
+			<property name="labelID">settings</property>
+			<property name="defaultID">settings</property>
+			<onclick>ActivateWindow(Settings)</onclick>
+			<property name="path">ActivateWindow(Settings)</property>
+			<property name="list">Settings</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),num-13000)</visible>
+			<property name="group">13000</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">num-13000</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>Customize home</label>
+			<label2>Common Shortcut</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">31210</property>
+			<property name="defaultID">31210</property>
+			<onclick>RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</onclick>
+			<property name="path">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</property>
+			<property name="list">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),num-13000)</visible>
+			<property name="group">13000</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">num-13000</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>$LOCALIZE[13009]</label>
+			<label2>XBMC Command</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">13009</property>
+			<property name="defaultID">13009</property>
+			<onclick>ActivateWindow(shutdownmenu)</onclick>
+			<property name="path">ActivateWindow(shutdownmenu)</property>
+			<property name="list">shutdownmenu</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),num-13000)</visible>
+			<property name="group">13000</property>
+			<property name="isSubmenu">True</property>
+			<property name="submenuVisibility">num-13000</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-music">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[133]</label>
+			<label2>Music</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb>DefaultMusicArtists.png</thumb>
+			<property name="labelID">133</property>
+			<property name="defaultID">133</property>
+			<onclick>ActivateWindow(Music,Artists,return)</onclick>
+			<property name="path">ActivateWindow(Music,Artists,return)</property>
+			<property name="list">Artists</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$LOCALIZE[132]</label>
+			<label2>Music</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb>DefaultMusicAlbums.png</thumb>
+			<property name="labelID">132</property>
+			<property name="defaultID">132</property>
+			<onclick>ActivateWindow(Music,Albums,return)</onclick>
+			<property name="path">ActivateWindow(Music,Albums,return)</property>
+			<property name="list">Albums</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>Recently Added</label>
+			<label2>Music</label2>
+			<icon>DefaultMusicRecentlyAdded.png</icon>
+			<thumb />
+			<property name="labelID">31705</property>
+			<property name="defaultID">31705</property>
+			<onclick>ActivateWindow(Music,RecentlyAddedAlbums,return)</onclick>
+			<property name="path">ActivateWindow(Music,RecentlyAddedAlbums,return)</property>
+			<property name="list">RecentlyAddedAlbums</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
+			<label>Recently Played</label>
+			<label2>Music</label2>
+			<icon>DefaultMusicRecentlyPlayed.png</icon>
+			<thumb />
+			<property name="labelID">31016</property>
+			<property name="defaultID">31016</property>
+			<onclick>ActivateWindow(Music,RecentlyPlayedAlbums,return)</onclick>
+			<property name="path">ActivateWindow(Music,RecentlyPlayedAlbums,return)</property>
+			<property name="list">RecentlyPlayedAlbums</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
+			<label>$LOCALIZE[136]</label>
+			<label2>Music</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb>DefaultMusicPlaylists.png</thumb>
+			<property name="labelID">136</property>
+			<property name="defaultID">136</property>
+			<onclick>ActivateWindow(Music,Playlists,return)</onclick>
+			<property name="path">ActivateWindow(Music,Playlists,return)</property>
+			<property name="list">Playlists</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUM[6]</property>
+			<label>$LOCALIZE[20389]</label>
+			<label2>Common Shortcut</label2>
+			<icon>DefaultMusicVideos.png</icon>
+			<thumb />
+			<property name="labelID">musicvideos</property>
+			<property name="defaultID">musicvideos</property>
+			<onclick>ActivateWindow(Videos,videodb://musicvideos/titles/,return)</onclick>
+			<property name="path">ActivateWindow(Videos,videodb://musicvideos/titles/,return)</property>
+			<property name="list">videodb://musicvideos/titles/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="7">
+			<property name="id">$NUM[7]</property>
+			<label>$LOCALIZE[24001]</label>
+			<label2>Music</label2>
+			<icon>DefaultAddonMusic.png</icon>
+			<thumb />
+			<property name="labelID">24001</property>
+			<property name="defaultID">24001</property>
+			<onclick>ActivateWindow(Music,Addons,return)</onclick>
+			<property name="path">ActivateWindow(Music,Addons,return)</property>
+			<property name="list">Addons</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-music">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[133]</label>
+			<label2>Music</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb>DefaultMusicArtists.png</thumb>
+			<property name="labelID">133</property>
+			<property name="defaultID">133</property>
+			<onclick>ActivateWindow(Music,Artists,return)</onclick>
+			<property name="path">ActivateWindow(Music,Artists,return)</property>
+			<property name="list">Artists</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$LOCALIZE[132]</label>
+			<label2>Music</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb>DefaultMusicAlbums.png</thumb>
+			<property name="labelID">132</property>
+			<property name="defaultID">132</property>
+			<onclick>ActivateWindow(Music,Albums,return)</onclick>
+			<property name="path">ActivateWindow(Music,Albums,return)</property>
+			<property name="list">Albums</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>Recently Added</label>
+			<label2>Music</label2>
+			<icon>DefaultMusicRecentlyAdded.png</icon>
+			<thumb />
+			<property name="labelID">31705</property>
+			<property name="defaultID">31705</property>
+			<onclick>ActivateWindow(Music,RecentlyAddedAlbums,return)</onclick>
+			<property name="path">ActivateWindow(Music,RecentlyAddedAlbums,return)</property>
+			<property name="list">RecentlyAddedAlbums</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
+			<label>Recently Played</label>
+			<label2>Music</label2>
+			<icon>DefaultMusicRecentlyPlayed.png</icon>
+			<thumb />
+			<property name="labelID">31016</property>
+			<property name="defaultID">31016</property>
+			<onclick>ActivateWindow(Music,RecentlyPlayedAlbums,return)</onclick>
+			<property name="path">ActivateWindow(Music,RecentlyPlayedAlbums,return)</property>
+			<property name="list">RecentlyPlayedAlbums</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
+			<label>$LOCALIZE[136]</label>
+			<label2>Music</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb>DefaultMusicPlaylists.png</thumb>
+			<property name="labelID">136</property>
+			<property name="defaultID">136</property>
+			<onclick>ActivateWindow(Music,Playlists,return)</onclick>
+			<property name="path">ActivateWindow(Music,Playlists,return)</property>
+			<property name="list">Playlists</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUM[6]</property>
+			<label>$LOCALIZE[20389]</label>
+			<label2>Common Shortcut</label2>
+			<icon>DefaultMusicVideos.png</icon>
+			<thumb />
+			<property name="labelID">musicvideos</property>
+			<property name="defaultID">musicvideos</property>
+			<onclick>ActivateWindow(Videos,videodb://musicvideos/titles/,return)</onclick>
+			<property name="path">ActivateWindow(Videos,videodb://musicvideos/titles/,return)</property>
+			<property name="list">videodb://musicvideos/titles/</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="7">
+			<property name="id">$NUM[7]</property>
+			<label>$LOCALIZE[24001]</label>
+			<label2>Music</label2>
+			<icon>DefaultAddonMusic.png</icon>
+			<thumb />
+			<property name="labelID">24001</property>
+			<property name="defaultID">24001</property>
+			<onclick>ActivateWindow(Music,Addons,return)</onclick>
+			<property name="path">ActivateWindow(Music,Addons,return)</property>
+			<property name="list">Addons</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),music)</visible>
+			<property name="group">music</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-artists" />
+	<include name="skinshortcuts-group-alt-artists" />
+	<include name="skinshortcuts-group-albums" />
+	<include name="skinshortcuts-group-alt-albums" />
+	<include name="skinshortcuts-group-radio">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[19019]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<thumb />
+			<property name="labelID">19019</property>
+			<property name="defaultID">19019</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioChannels)</onclick>
+			<property name="path">ActivateWindow(RadioChannels)</property>
+			<property name="list">RadioChannels</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">radio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$LOCALIZE[22020]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<thumb />
+			<property name="labelID">22020</property>
+			<property name="defaultID">22020</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioGuide)</onclick>
+			<property name="path">ActivateWindow(RadioGuide)</property>
+			<property name="list">RadioGuide</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">radio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>$LOCALIZE[19163]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<thumb />
+			<property name="labelID">19163</property>
+			<property name="defaultID">19163</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioRecordings)</onclick>
+			<property name="path">ActivateWindow(RadioRecordings)</property>
+			<property name="list">RadioRecordings</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">radio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
+			<label>$LOCALIZE[19040]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<thumb />
+			<property name="labelID">19040</property>
+			<property name="defaultID">19040</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioTimers)</onclick>
+			<property name="path">ActivateWindow(RadioTimers)</property>
+			<property name="list">RadioTimers</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">radio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
+			<label>$LOCALIZE[137]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<thumb />
+			<property name="labelID">137</property>
+			<property name="defaultID">137</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioSearch)</onclick>
+			<property name="path">ActivateWindow(RadioSearch)</property>
+			<property name="list">RadioSearch</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">radio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-radio">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[19019]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<thumb />
+			<property name="labelID">19019</property>
+			<property name="defaultID">19019</property>
+			<visible>[PVR.HasRadioChannels] + StringCompare(Window(10000).Property(submenuVisibility),radio)</visible>
+			<onclick>ActivateWindow(RadioChannels)</onclick>
+			<property name="path">ActivateWindow(RadioChannels)</property>
+			<property name="list">RadioChannels</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">radio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$LOCALIZE[22020]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<thumb />
+			<property name="labelID">22020</property>
+			<property name="defaultID">22020</property>
+			<visible>[PVR.HasRadioChannels] + StringCompare(Window(10000).Property(submenuVisibility),radio)</visible>
+			<onclick>ActivateWindow(RadioGuide)</onclick>
+			<property name="path">ActivateWindow(RadioGuide)</property>
+			<property name="list">RadioGuide</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">radio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>$LOCALIZE[19163]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<thumb />
+			<property name="labelID">19163</property>
+			<property name="defaultID">19163</property>
+			<visible>[PVR.HasRadioChannels] + StringCompare(Window(10000).Property(submenuVisibility),radio)</visible>
+			<onclick>ActivateWindow(RadioRecordings)</onclick>
+			<property name="path">ActivateWindow(RadioRecordings)</property>
+			<property name="list">RadioRecordings</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">radio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
+			<label>$LOCALIZE[19040]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<thumb />
+			<property name="labelID">19040</property>
+			<property name="defaultID">19040</property>
+			<visible>[PVR.HasRadioChannels] + StringCompare(Window(10000).Property(submenuVisibility),radio)</visible>
+			<onclick>ActivateWindow(RadioTimers)</onclick>
+			<property name="path">ActivateWindow(RadioTimers)</property>
+			<property name="list">RadioTimers</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">radio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
+			<label>$LOCALIZE[137]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<thumb />
+			<property name="labelID">137</property>
+			<property name="defaultID">137</property>
+			<visible>[PVR.HasRadioChannels] + StringCompare(Window(10000).Property(submenuVisibility),radio)</visible>
+			<onclick>ActivateWindow(RadioSearch)</onclick>
+			<property name="path">ActivateWindow(RadioSearch)</property>
+			<property name="list">RadioSearch</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">radio</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-24001">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[0]</label>
+			<label2>Shortcut</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb />
+			<property name="labelID">0</property>
+			<property name="defaultID">0</property>
+			<onclick>ActivateWindow(Programs,return)</onclick>
+			<property name="path">ActivateWindow(Programs,return)</property>
+			<property name="list">Programs</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">24001</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$LOCALIZE[24033]</label>
+			<label2>Shortcut</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">24033</property>
+			<property name="defaultID">24033</property>
+			<onclick>ActivateWindow(Addonbrowser,addons://repos/,return)</onclick>
+			<property name="path">ActivateWindow(Addonbrowser,addons://repos/,return)</property>
+			<property name="list">addons://repos/</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">24001</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-24001">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[0]</label>
+			<label2>Shortcut</label2>
+			<icon>DefaultAddonProgram.png</icon>
+			<thumb />
+			<property name="labelID">0</property>
+			<property name="defaultID">0</property>
+			<onclick>ActivateWindow(Programs,return)</onclick>
+			<property name="path">ActivateWindow(Programs,return)</property>
+			<property name="list">Programs</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),num-24001)</visible>
+			<property name="group">24001</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$LOCALIZE[24033]</label>
+			<label2>Shortcut</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">24033</property>
+			<property name="defaultID">24033</property>
+			<onclick>ActivateWindow(Addonbrowser,addons://repos/,return)</onclick>
+			<property name="path">ActivateWindow(Addonbrowser,addons://repos/,return)</property>
+			<property name="list">addons://repos/</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),num-24001)</visible>
+			<property name="group">24001</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-13000">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[10004]</label>
+			<label2>Settings</label2>
+			<icon>DefaultIconSettings.png</icon>
+			<thumb />
+			<property name="labelID">settings</property>
+			<property name="defaultID">settings</property>
+			<onclick>ActivateWindow(Settings)</onclick>
+			<property name="path">ActivateWindow(Settings)</property>
+			<property name="list">Settings</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">13000</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>Customize home</label>
+			<label2>Common Shortcut</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">31210</property>
+			<property name="defaultID">31210</property>
+			<onclick>RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</onclick>
+			<property name="path">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</property>
+			<property name="list">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">13000</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>$LOCALIZE[13009]</label>
+			<label2>XBMC Command</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">13009</property>
+			<property name="defaultID">13009</property>
+			<onclick>ActivateWindow(shutdownmenu)</onclick>
+			<property name="path">ActivateWindow(shutdownmenu)</property>
+			<property name="list">shutdownmenu</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">13000</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-13000">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[10004]</label>
+			<label2>Settings</label2>
+			<icon>DefaultIconSettings.png</icon>
+			<thumb />
+			<property name="labelID">settings</property>
+			<property name="defaultID">settings</property>
+			<onclick>ActivateWindow(Settings)</onclick>
+			<property name="path">ActivateWindow(Settings)</property>
+			<property name="list">Settings</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),num-13000)</visible>
+			<property name="group">13000</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>Customize home</label>
+			<label2>Common Shortcut</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">31210</property>
+			<property name="defaultID">31210</property>
+			<onclick>RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</onclick>
+			<property name="path">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</property>
+			<property name="list">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),num-13000)</visible>
+			<property name="group">13000</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>$LOCALIZE[13009]</label>
+			<label2>XBMC Command</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">13009</property>
+			<property name="defaultID">13009</property>
+			<onclick>ActivateWindow(shutdownmenu)</onclick>
+			<property name="path">ActivateWindow(shutdownmenu)</property>
+			<property name="list">shutdownmenu</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),num-13000)</visible>
+			<property name="group">13000</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-template-widget-fixed">
+		<include condition="StringCompare(System.ProfileName,Master user)">skinshortcuts-template-widget-fixed-Master user</include>
+	</include>
+	<include name="skinshortcuts-template-widget-fixed-Master user">
+		<include>skinshortcuts-template-busyanimation</include>
+		<control id="8011" type="fixedlist">
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),music) | StringCompare(Container(9000).ListItem.Property(submenuVisibility),artists) | StringCompare(Container(9000).ListItem.Property(submenuVisibility),albums) | StringCompare(Container(9000).ListItem.Property(submenuVisibility),radio) | StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-24001) | StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-13000)</visible>
+			<include name="FixedWrapWidgetContent">
+				<param name="id">8011</param>
+			</include>
+			<content limit="$VAR[WidgetLimit]" target="">$PYTHON[]</content>
+		</control>
+		<include name="FixedWrapWidgetLabels">
+			<param name="id">8011</param>
+			<param name="widgetLine1">widgetLine1</param>
+			<param name="widgetLine2">widgetLine2</param>
+		</include>
+	</include>
+	<include name="skinshortcuts-template-widget-wrapped">
+		<include condition="StringCompare(System.ProfileName,Master user)">skinshortcuts-template-widget-wrapped-Master user</include>
+	</include>
+	<include name="skinshortcuts-template-widget-wrapped-Master user">
+		<include>skinshortcuts-template-busyanimation</include>
+		<control id="8011" type="wraplist">
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),music) | StringCompare(Container(9000).ListItem.Property(submenuVisibility),artists) | StringCompare(Container(9000).ListItem.Property(submenuVisibility),albums) | StringCompare(Container(9000).ListItem.Property(submenuVisibility),radio) | StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-24001) | StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-13000)</visible>
+			<include name="FixedWrapWidgetContent">
+				<param name="id">8011</param>
+			</include>
+			<content limit="$VAR[WidgetLimit]" target="">$PYTHON[]</content>
+		</control>
+		<include name="FixedWrapWidgetLabels">
+			<param name="id">8011</param>
+			<param name="widgetLine1">widgetLine1</param>
+			<param name="widgetLine2">widgetLine2</param>
+		</include>
+	</include>
+	<include name="skinshortcuts-template-widget-defaultpanel">
+		<include condition="StringCompare(System.ProfileName,Master user)">skinshortcuts-template-widget-defaultpanel-Master user</include>
+	</include>
+	<include name="skinshortcuts-template-widget-defaultpanel-Master user">
+		<control type="image">
+			<visible>!StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31313]) + !StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100]) + !StringCompare(Container(9000).ListItem.Property(widget),weather) + Control.HasFocus(8011) + !Container(8011).IsUpdating</visible>
+			<animation condition="StringCompare(Skin.String(HomeLayout),2)" effect="slide" end="0,190" start="0,0" time="0">Conditional</animation>
+			<left>24</left>
+			<top>575</top>
+			<width>219</width>
+			<height>316</height>
+			<animation delay="200" effect="fade" time="320">Visible</animation>
+			<animation effect="fade" time="200">Hidden</animation>
+			<texture colordiffuse="$VAR[ColorHighlightVar]">listselect_fo.png</texture>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,8)" easing="inout" effect="slide" end="207,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,7)" easing="inout" effect="slide" end="207,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,6)" easing="inout" effect="slide" end="207,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,5)" easing="inout" effect="slide" end="207,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,4)" easing="inout" effect="slide" end="207,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,3)" easing="inout" effect="slide" end="207,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,2)" easing="inout" effect="slide" end="207,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,1)" easing="inout" effect="slide" end="207,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,0)" easing="inout" effect="slide" end="207,0" time="300" tween="cubic">Conditional</animation>
+		</control>
+		<control type="image">
+			<visible>StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31313]) + Control.HasFocus(8011) + !Container(8011).IsUpdating</visible>
+			<animation condition="StringCompare(Skin.String(HomeLayout),2)" effect="slide" end="0,190" start="0,0" time="0">Conditional</animation>
+			<left>26</left>
+			<top>572</top>
+			<width>322</width>
+			<height>322</height>
+			<animation delay="200" effect="fade" time="320">Visible</animation>
+			<animation effect="fade" time="200">Hidden</animation>
+			<texture colordiffuse="$VAR[ColorHighlightVar]">listselect_fo.png</texture>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,4)" easing="inout" effect="slide" end="310,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,3)" easing="inout" effect="slide" end="310,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,2)" easing="inout" effect="slide" end="310,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,1)" easing="inout" effect="slide" end="310,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,0)" easing="inout" effect="slide" end="310,0" time="300" tween="cubic">Conditional</animation>
+		</control>
+		<control type="image">
+			<visible>StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100]) + Control.HasFocus(8011) + !Container(8011).IsUpdating</visible>
+			<animation condition="StringCompare(Skin.String(HomeLayout),2)" effect="slide" end="0,190" start="0,0" time="0">Conditional</animation>
+			<left>23</left>
+			<top>575</top>
+			<width>478</width>
+			<height>316</height>
+			<animation delay="200" effect="fade" time="320">Visible</animation>
+			<animation effect="fade" time="200">Hidden</animation>
+			<texture colordiffuse="$VAR[ColorHighlightVar]">listselect_fo.png</texture>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,2)" easing="inout" effect="slide" end="466,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,1)" easing="inout" effect="slide" end="466,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,0)" easing="inout" effect="slide" end="466,0" time="300" tween="cubic">Conditional</animation>
+		</control>
+		<include>skinshortcuts-template-busyanimation</include>
+		<control id="8011" type="panel">
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),music) | StringCompare(Container(9000).ListItem.Property(submenuVisibility),artists) | StringCompare(Container(9000).ListItem.Property(submenuVisibility),albums) | StringCompare(Container(9000).ListItem.Property(submenuVisibility),radio) | StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-24001) | StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-13000)</visible>
+			<oninfo condition="StringCompare(Container(9000).ListItem.Property(widgetType),movies)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(8011).ListItem.Label])</oninfo>
+			<oninfo condition="StringCompare(Container(9000).ListItem.Property(widgetType),episodes)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(8011).ListItem.TvShowTitle])</oninfo>
+			<animation condition="Container(8011).IsUpdating | Container(9000).OnNext | Container(9000).OnPrevious | Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml)" effect="fade" end="0" reversible="false" start="100" time="0">Conditional</animation>
+			<animation condition="StringCompare(Skin.String(HomeLayout),2)" effect="slide" end="0,190" start="0,0" time="0">Conditional</animation>
+			<left>30</left>
+			<top>581</top>
+			<width>1864</width>
+			<height>310</height>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<onback>9000</onback>
+			<viewtype label="535">list</viewtype>
+			<focusposition>0</focusposition>
+			<pagecontrol>-</pagecontrol>
+			<preloaditems>2</preloaditems>
+			<scrolltime tween="quadratic">400</scrolltime>
+			<orientation>Horizontal</orientation>
+			<visible>!IsEmpty(Container(9000).ListItem.Property(widgetPath))</visible>
+			<autoscroll delay="10000" repeat="10000" time="10000">[Control.IsVisible(9003) + !Control.HasFocus(8011)] + !Skin.HasSetting(Disable.WidgetAutoScroll)</autoscroll>
+			<itemlayout condition="!StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31313]) + !StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100])" height="304" width="207">
+				<control type="group">
+					<left>0</left>
+					<control type="image">
+						<visible>IsEmpty(ListItem.Art(tvshow.poster))</visible>
+						<top>6</top>
+						<left>6</left>
+						<width>195</width>
+						<height>292</height>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
+						<texture background="true" fallback="DefaultFallback.png">$INFO[ListItem.Art(thumb)]</texture>
+						<fadetime>400</fadetime>
+					</control>
+					<control type="image">
+						<visible>!IsEmpty(ListItem.Art(tvshow.poster))</visible>
+						<top>6</top>
+						<left>6</left>
+						<width>195</width>
+						<height>292</height>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
+						<texture background="true" fallback="DefaultFallback.png">$INFO[ListItem.Art(tvshow.poster)]</texture>
+						<fadetime>400</fadetime>
+					</control>
+					<control type="image">
+						<top>6</top>
+						<left>6</left>
+						<width>195</width>
+						<height>292</height>
+						<texture>thumbs/diffuse.png</texture>
+						<fadetime>300</fadetime>
+					</control>
+				</control>
+			</itemlayout>
+			<focusedlayout condition="!StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31313]) + !StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100])" height="304" width="207">
+				<control type="group">
+					<include>PanelFocusedItemZoom</include>
+					<left>0</left>
+					<control type="image">
+						<visible>IsEmpty(ListItem.Art(tvshow.poster))</visible>
+						<top>6</top>
+						<left>6</left>
+						<width>195</width>
+						<height>292</height>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
+						<texture background="true" fallback="DefaultFallback.png">$INFO[ListItem.Art(thumb)]</texture>
+					</control>
+					<control type="image">
+						<visible>!IsEmpty(ListItem.Art(tvshow.poster))</visible>
+						<top>6</top>
+						<left>6</left>
+						<width>195</width>
+						<height>292</height>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
+						<texture background="true" fallback="DefaultFallback.png">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					</control>
+					<control type="image">
+						<animation center="auto" condition="Control.HasFocus(8011)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+						<animation center="auto" condition="Control.HasFocus(8011)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+						<top>6</top>
+						<left>6</left>
+						<width>195</width>
+						<height>292</height>
+						<texture>thumbs/diffuse.png</texture>
+					</control>
+				</control>
+			</focusedlayout>
+			<itemlayout condition="StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31313])" height="310" width="310">
+				<control type="group">
+					<left>8</left>
+					<control type="image">
+						<top>3</top>
+						<left>0</left>
+						<width>298</width>
+						<height>298</height>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
+						<texture background="true" fallback="DefaultFolder.png">$INFO[ListItem.Icon]</texture>
+						<fadetime>400</fadetime>
+					</control>
+					<control type="image">
+						<top>3</top>
+						<left>0</left>
+						<width>298</width>
+						<height>298</height>
+						<texture>thumbs/diffuse.png</texture>
+					</control>
+				</control>
+			</itemlayout>
+			<focusedlayout condition="StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31313])" height="310" width="310">
+				<control type="group">
+					<include>PanelFocusedItemZoom</include>
+					<left>8</left>
+					<control type="image">
+						<top>3</top>
+						<left>0</left>
+						<width>298</width>
+						<height>298</height>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
+						<texture background="true" fallback="DefaultFolder.png">$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="image">
+						<animation center="auto" condition="Control.HasFocus(8011)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+						<animation center="auto" condition="Control.HasFocus(8011)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+						<top>3</top>
+						<left>0</left>
+						<width>298</width>
+						<height>298</height>
+						<texture>thumbs/diffuse.png</texture>
+					</control>
+				</control>
+			</focusedlayout>
+			<itemlayout condition="StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100])" height="304" width="466">
+				<control type="image">
+					<top>6</top>
+					<left>5</left>
+					<width>454</width>
+					<height>292</height>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<texture background="true" fallback="DefaultFallback.png">$INFO[ListItem.Icon]</texture>
+					<fadetime>400</fadetime>
+				</control>
+				<control type="image">
+					<top>6</top>
+					<left>5</left>
+					<width>454</width>
+					<height>292</height>
+					<texture>thumbs/diffuse.png</texture>
+				</control>
+			</itemlayout>
+			<focusedlayout condition="StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100])" height="304" width="466">
+				<include>PanelFocusedItemZoom</include>
+				<control type="image">
+					<top>6</top>
+					<left>5</left>
+					<width>454</width>
+					<height>292</height>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<texture background="true" fallback="DefaultFallback.png">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="image">
+					<animation center="auto" condition="Control.HasFocus(8011)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+					<animation center="auto" condition="Control.HasFocus(8011)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					<top>6</top>
+					<left>5</left>
+					<width>454</width>
+					<height>292</height>
+					<texture>thumbs/diffuse.png</texture>
+				</control>
+			</focusedlayout>
+			<content limit="$VAR[WidgetLimit]" target="">$PYTHON[]</content>
+		</control>
+		<control type="group">
+			<animation condition="StringCompare(Skin.String(HomeLayout),2)" effect="slide" end="0,190" start="0,0" time="0">Conditional</animation>
+			<control type="label">
+				<animation condition="[ControlGroup(9003).IsVisible + Skin.HasSetting(Enable.PersistentWidgets)] | [ControlGroup(9003).HasFocus + !Skin.HasSetting(Enable.PersistentWidgets)]" effect="fade" end="100" start="0" time="300" tween="cubic">Visible</animation>
+				<animation condition="[ControlGroup(9003).IsVisible + Skin.HasSetting(Enable.PersistentWidgets)] | [ControlGroup(9003).HasFocus + !Skin.HasSetting(Enable.PersistentWidgets)]" effect="fade" end="0" start="100" time="0">Hidden</animation>
+				<animation easing="inout" effect="slide" end="0,700" start="0" time="200" tween="sine">WindowClose</animation>
+				<left>965</left>
+				<top>524</top>
+				<width>920</width>
+				<height>40</height>
+				<font>font15_title</font>
+				<align>right</align>
+				<textcolor>$VAR[ColorTextVar]</textcolor>
+				<label>$VAR[WidgetNameLabelVar]</label>
+				<visible>!Container(8011).IsUpdating + !Container(9000).OnNext + !Container(9000).OnPrevious</visible>
+			</control>
+			<control type="group">
+				<visible>Control.HasFocus(8011) + !StringCompare(Container(9000).ListItem.Property(widget),weather)</visible>
+				<animation condition="[Control.IsVisible(8011) + Skin.HasSetting(Enable.PersistentWidgets)] | [Control.HasFocus(8011) + !Skin.HasSetting(Enable.PersistentWidgets)]" effect="fade" end="100" start="0" time="300" tween="cubic">Visible</animation>
+				<animation condition="[Control.IsVisible(8011) + Skin.HasSetting(Enable.PersistentWidgets)] | [Control.HasFocus(8011) + !Skin.HasSetting(Enable.PersistentWidgets)]" effect="fade" end="0" start="100" time="0">Hidden</animation>
+				<animation easing="inout" effect="slide" end="0,700" start="0" time="200" tween="sine">WindowClose</animation>
+				<control type="group">
+					<top>895</top>
+					<left>35</left>
+					<control type="label">
+						<width>1850</width>
+						<height>50</height>
+						<font>font16_title</font>
+						<textcolor>$VAR[ColorTextVar]</textcolor>
+						<label>$VAR[widgetLine1] $VAR[widgetLine2]</label>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="skinshortcuts-template-widget-verticalpanel">
+		<include condition="StringCompare(System.ProfileName,Master user)">skinshortcuts-template-widget-verticalpanel-Master user</include>
+	</include>
+	<include name="skinshortcuts-template-widget-verticalpanel-Master user">
+		<control type="image">
+			<visible>!StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31313]) + !StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100]) + !StringCompare(Container(9000).ListItem.Property(widget),weather) + Control.HasFocus(8011)</visible>
+			<left>554</left>
+			<top>48</top>
+			<width>219</width>
+			<height>316</height>
+			<animation delay="200" effect="fade" time="320">Visible</animation>
+			<animation effect="fade" time="200">Hidden</animation>
+			<texture colordiffuse="$VAR[ColorHighlightVar]">listselect_fo.png</texture>
+			<animation condition="IntegerGreaterThan(Container(8011).Row,0)" easing="inout" effect="slide" end="0,304" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,4)" easing="inout" effect="slide" end="207,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,3)" easing="inout" effect="slide" end="207,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,2)" easing="inout" effect="slide" end="207,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,1)" easing="inout" effect="slide" end="207,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,0)" easing="inout" effect="slide" end="207,0" time="300" tween="cubic">Conditional</animation>
+		</control>
+		<control type="image">
+			<visible>StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31313]) + Control.HasFocus(8011)</visible>
+			<left>568</left>
+			<top>48</top>
+			<width>316</width>
+			<height>316</height>
+			<animation delay="200" effect="fade" time="320">Visible</animation>
+			<animation effect="fade" time="200">Hidden</animation>
+			<texture colordiffuse="$VAR[ColorHighlightVar]">listselect_fo.png</texture>
+			<animation condition="IntegerGreaterThan(Container(8011).Row,0)" easing="inout" effect="slide" end="0,304" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,2)" easing="inout" effect="slide" end="304,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,1)" easing="inout" effect="slide" end="304,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,0)" easing="inout" effect="slide" end="304,0" time="300" tween="cubic">Conditional</animation>
+		</control>
+		<control type="image">
+			<visible>StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100]) + Control.HasFocus(8011)</visible>
+			<left>554</left>
+			<top>48</top>
+			<width>322</width>
+			<height>215</height>
+			<animation delay="200" effect="fade" time="320">Visible</animation>
+			<animation effect="fade" time="200">Hidden</animation>
+			<texture colordiffuse="$VAR[ColorHighlightVar]">listselect_fo.png</texture>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,2)" easing="inout" effect="slide" end="310,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,1)" easing="inout" effect="slide" end="310,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Column,0)" easing="inout" effect="slide" end="310,0" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Row,1)" easing="inout" effect="slide" end="0,203" time="300" tween="cubic">Conditional</animation>
+			<animation condition="IntegerGreaterThan(Container(8011).Row,0)" easing="inout" effect="slide" end="0,203" time="300" tween="cubic">Conditional</animation>
+		</control>
+		<include>skinshortcuts-template-busyanimation</include>
+		<control id="8011" type="panel">
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),music) | StringCompare(Container(9000).ListItem.Property(submenuVisibility),artists) | StringCompare(Container(9000).ListItem.Property(submenuVisibility),albums) | StringCompare(Container(9000).ListItem.Property(submenuVisibility),radio) | StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-24001) | StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-13000)</visible>
+			<oninfo condition="StringCompare(Container(9000).ListItem.Property(widgetType),movies)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(8011).ListItem.Label])</oninfo>
+			<oninfo condition="StringCompare(Container(9000).ListItem.Property(widgetType),episodes)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(8011).ListItem.TvShowTitle])</oninfo>
+			<animation condition="Container(8011).IsUpdating | Container(9000).OnNext | Container(9000).OnPrevious | Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml)" effect="fade" end="0" reversible="false" start="100" time="0">Conditional</animation>
+			<left>560</left>
+			<top>54</top>
+			<width>1242</width>
+			<height>609</height>
+			<onleft>9000</onleft>
+			<onright>8011</onright>
+			<onback>9000</onback>
+			<viewtype label="535">list</viewtype>
+			<focusposition>0</focusposition>
+			<pagecontrol>-</pagecontrol>
+			<preloaditems>2</preloaditems>
+			<scrolltime tween="quadratic">400</scrolltime>
+			<orientation>Vertical</orientation>
+			<visible>!IsEmpty(Container(9000).ListItem.Property(widgetPath)) + ![Control.HasFocus(9010) + !Skin.HasSetting(Enable.PersistentWidgets)]</visible>
+			<autoscroll delay="10000" repeat="10000" time="10000">[Control.IsVisible(9003) + !ControlGroup(9003).HasFocus] + !Skin.HasSetting(Disable.WidgetAutoScroll)</autoscroll>
+			<itemlayout condition="!StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31313]) + !StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100])" height="304" width="207">
+				<control type="image">
+					<visible>IsEmpty(ListItem.Art(tvshow.poster))</visible>
+					<top>6</top>
+					<left>6</left>
+					<width>195</width>
+					<height>292</height>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<texture background="true" fallback="DefaultFallback.png">$INFO[ListItem.Art(thumb)]</texture>
+					<fadetime>400</fadetime>
+				</control>
+				<control type="image">
+					<visible>!IsEmpty(ListItem.Art(tvshow.poster))</visible>
+					<top>6</top>
+					<left>6</left>
+					<width>195</width>
+					<height>292</height>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<texture background="true" fallback="DefaultFallback.png">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					<fadetime>400</fadetime>
+				</control>
+				<control type="image">
+					<top>6</top>
+					<left>6</left>
+					<width>195</width>
+					<height>292</height>
+					<texture>thumbs/diffuse.png</texture>
+					<fadetime>300</fadetime>
+				</control>
+			</itemlayout>
+			<focusedlayout condition="!StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31313]) + !StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100])" height="304" width="207">
+				<control type="group">
+					<include>PanelFocusedItemZoom</include>
+					<control type="image">
+						<visible>IsEmpty(ListItem.Art(tvshow.poster))</visible>
+						<top>6</top>
+						<left>6</left>
+						<width>195</width>
+						<height>292</height>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
+						<texture background="true" fallback="DefaultFallback.png">$INFO[ListItem.Art(thumb)]</texture>
+					</control>
+					<control type="image">
+						<visible>!IsEmpty(ListItem.Art(tvshow.poster))</visible>
+						<top>6</top>
+						<left>6</left>
+						<width>195</width>
+						<height>292</height>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
+						<texture background="true" fallback="DefaultFallback.png">$INFO[ListItem.Art(tvshow.poster)]</texture>
+					</control>
+					<control type="image">
+						<animation center="auto" condition="Control.HasFocus(8011)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+						<animation center="auto" condition="Control.HasFocus(8011)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+						<top>6</top>
+						<left>6</left>
+						<width>195</width>
+						<height>292</height>
+						<texture>thumbs/diffuse.png</texture>
+					</control>
+				</control>
+			</focusedlayout>
+			<itemlayout condition="StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31313])" height="304" width="304">
+				<control type="group">
+					<left>14</left>
+					<control type="image">
+						<top>6</top>
+						<left>6</left>
+						<width>292</width>
+						<height>292</height>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
+						<texture background="true" fallback="DefaultFolder.png">$INFO[ListItem.Icon]</texture>
+						<fadetime>400</fadetime>
+					</control>
+					<control type="image">
+						<top>6</top>
+						<left>6</left>
+						<width>292</width>
+						<height>292</height>
+						<texture>thumbs/diffuse.png</texture>
+					</control>
+				</control>
+			</itemlayout>
+			<focusedlayout condition="StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31313])" height="304" width="304">
+				<control type="group">
+					<include>PanelFocusedItemZoom</include>
+					<left>14</left>
+					<control type="image">
+						<top>6</top>
+						<left>6</left>
+						<width>292</width>
+						<height>292</height>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
+						<texture background="true" fallback="DefaultFolder.png">$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="image">
+						<animation center="auto" condition="Control.HasFocus(8011)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+						<animation center="auto" condition="Control.HasFocus(8011)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+						<top>6</top>
+						<left>6</left>
+						<width>292</width>
+						<height>292</height>
+						<texture>thumbs/diffuse.png</texture>
+					</control>
+				</control>
+			</focusedlayout>
+			<itemlayout condition="StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100])" height="203" width="310">
+				<control type="image">
+					<top>6</top>
+					<left>6</left>
+					<width>298</width>
+					<height>191</height>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<texture background="true" fallback="DefaultFallback.png">$INFO[ListItem.Icon]</texture>
+					<fadetime>400</fadetime>
+				</control>
+				<control type="image">
+					<top>6</top>
+					<left>6</left>
+					<width>298</width>
+					<height>191</height>
+					<texture>thumbs/diffuse.png</texture>
+				</control>
+			</itemlayout>
+			<focusedlayout condition="StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100])" height="203" width="310">
+				<include>PanelFocusedItemZoom</include>
+				<control type="image">
+					<top>6</top>
+					<left>6</left>
+					<width>298</width>
+					<height>191</height>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<texture background="true" fallback="DefaultFallback.png">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="image">
+					<animation center="auto" condition="Control.HasFocus(8011)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
+					<animation center="auto" condition="Control.HasFocus(8011)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
+					<top>6</top>
+					<left>6</left>
+					<width>298</width>
+					<height>191</height>
+					<texture>thumbs/diffuse.png</texture>
+				</control>
+			</focusedlayout>
+			<content limit="$VAR[WidgetLimit]" target="">$PYTHON[]</content>
+		</control>
+		<control type="group">
+			<visible>!StringCompare(Container(9000).ListItem.Property(widget),weather) + ![Control.HasFocus(9010) + !Skin.HasSetting(Enable.PersistentWidgets)]</visible>
+			<control type="label">
+				<animation condition="StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31313])" effect="slide" end="-10" start="0" time="0" tween="cubic">Conditional</animation>
+				<left>565</left>
+				<top>0</top>
+				<width>1225</width>
+				<height>40</height>
+				<font>font15_title</font>
+				<align>right</align>
+				<textcolor>$VAR[ColorTextVar]</textcolor>
+				<label>$INFO[Container(9000).ListItem.Property(widgetName)]</label>
+			</control>
+			<control type="group">
+				<visible>Control.HasFocus(8011)</visible>
+				<animation condition="StringCompare(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31313])" effect="slide" end="15" start="0" time="0" tween="cubic">Conditional</animation>
+				<top>673</top>
+				<left>565</left>
+				<control type="label">
+					<width>1225</width>
+					<height>45</height>
+					<font>font16_title</font>
+					<scroll>true</scroll>
+					<textcolor>$VAR[ColorTextVar]</textcolor>
+					<label>$VAR[widgetLine1]</label>
+				</control>
+				<control type="label">
+					<top>45</top>
+					<width>1242</width>
+					<height>45</height>
+					<font>font15</font>
+					<textcolor>$VAR[ColorTextVar]</textcolor>
+					<label>$VAR[widgetLine3]</label>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="skinshortcuts-template-widget.backgroundFanart">
+		<include condition="StringCompare(System.ProfileName,Master user)">skinshortcuts-template-widget.backgroundFanart-Master user</include>
+	</include>
+	<include name="skinshortcuts-template-widget.backgroundFanart-Master user">
+		<include name="WidgetFanart">
+			<param name="Visible">Control.HasFocus(80111) + !IsEmpty(Container(80111).ListItem.Art(fanart))</param>
+			<param name="imagePath">$INFO[Container(80111).ListItem.Art(fanart)]</param>
+		</include>
+		<include name="WidgetFanart">
+			<param name="Visible">Control.HasFocus(80112) + !IsEmpty(Container(80112).ListItem.Art(fanart))</param>
+			<param name="imagePath">$INFO[Container(80112).ListItem.Art(fanart)]</param>
+		</include>
+		<include name="WidgetFanart">
+			<param name="Visible">Control.HasFocus(80113) + !IsEmpty(Container(80113).ListItem.Art(fanart))</param>
+			<param name="imagePath">$INFO[Container(80113).ListItem.Art(fanart)]</param>
+		</include>
+		<include name="WidgetFanart">
+			<param name="Visible">Control.HasFocus(80114) + !IsEmpty(Container(80114).ListItem.Art(fanart))</param>
+			<param name="imagePath">$INFO[Container(80114).ListItem.Art(fanart)]</param>
+		</include>
+		<include name="WidgetFanart">
+			<param name="Visible">Control.HasFocus(80115) + !IsEmpty(Container(80115).ListItem.Art(fanart))</param>
+			<param name="imagePath">$INFO[Container(80115).ListItem.Art(fanart)]</param>
+		</include>
+		<include name="WidgetFanart">
+			<param name="Visible">Control.HasFocus(80116) + !IsEmpty(Container(80116).ListItem.Art(fanart))</param>
+			<param name="imagePath">$INFO[Container(80116).ListItem.Art(fanart)]</param>
+		</include>
+	</include>
+	<include name="skinshortcuts-template-busyanimation">
+		<include condition="StringCompare(System.ProfileName,Master user)">skinshortcuts-template-busyanimation-Master user</include>
+	</include>
+	<include name="skinshortcuts-template-busyanimation-Master user">
+		<control type="image">
+			<visible>Control.IsVisible(80111) + Container(80111).IsUpdating + ![Control.HasFocus(9010) + !Skin.HasSetting(Enable.PersistentWidgets)]</visible>
+			<animation condition="StringCompare(Skin.String(HomeLayout),2)" effect="slide" end="0,190" start="0,0" time="0">Conditional</animation>
+			<animation condition="StringCompare(Skin.String(HomeLayout),3)" effect="slide" end="221,-382" start="0,0" time="0">Conditional</animation>
+			<description>Busy animation</description>
+			<top>710</top>
+			<left>930</left>
+			<width>60</width>
+			<height>60</height>
+			<texture colordiffuse="$VAR[ColorTextVar]" fallback="special://skin/extras/spinners/Sun.png">$INFO[Skin.String(busyloader)]</texture>
+			<aspectratio>keep</aspectratio>
+			<animation center="auto" condition="true" effect="rotate" end="0" loop="true" start="360" time="3000">conditional</animation>
+		</control>
+		<control type="image">
+			<visible>Control.IsVisible(80112) + Container(80112).IsUpdating + ![Control.HasFocus(9010) + !Skin.HasSetting(Enable.PersistentWidgets)]</visible>
+			<animation condition="StringCompare(Skin.String(HomeLayout),2)" effect="slide" end="0,190" start="0,0" time="0">Conditional</animation>
+			<animation condition="StringCompare(Skin.String(HomeLayout),3)" effect="slide" end="221,-382" start="0,0" time="0">Conditional</animation>
+			<description>Busy animation</description>
+			<top>710</top>
+			<left>930</left>
+			<width>60</width>
+			<height>60</height>
+			<texture colordiffuse="$VAR[ColorTextVar]" fallback="special://skin/extras/spinners/Sun.png">$INFO[Skin.String(busyloader)]</texture>
+			<aspectratio>keep</aspectratio>
+			<animation center="auto" condition="true" effect="rotate" end="0" loop="true" start="360" time="3000">conditional</animation>
+		</control>
+		<control type="image">
+			<visible>Control.IsVisible(80113) + Container(80113).IsUpdating + ![Control.HasFocus(9010) + !Skin.HasSetting(Enable.PersistentWidgets)]</visible>
+			<animation condition="StringCompare(Skin.String(HomeLayout),2)" effect="slide" end="0,190" start="0,0" time="0">Conditional</animation>
+			<animation condition="StringCompare(Skin.String(HomeLayout),3)" effect="slide" end="221,-382" start="0,0" time="0">Conditional</animation>
+			<description>Busy animation</description>
+			<top>710</top>
+			<left>930</left>
+			<width>60</width>
+			<height>60</height>
+			<texture colordiffuse="$VAR[ColorTextVar]" fallback="special://skin/extras/spinners/Sun.png">$INFO[Skin.String(busyloader)]</texture>
+			<aspectratio>keep</aspectratio>
+			<animation center="auto" condition="true" effect="rotate" end="0" loop="true" start="360" time="3000">conditional</animation>
+		</control>
+		<control type="image">
+			<visible>Control.IsVisible(80114) + Container(80114).IsUpdating + ![Control.HasFocus(9010) + !Skin.HasSetting(Enable.PersistentWidgets)]</visible>
+			<animation condition="StringCompare(Skin.String(HomeLayout),2)" effect="slide" end="0,190" start="0,0" time="0">Conditional</animation>
+			<animation condition="StringCompare(Skin.String(HomeLayout),3)" effect="slide" end="221,-382" start="0,0" time="0">Conditional</animation>
+			<description>Busy animation</description>
+			<top>710</top>
+			<left>930</left>
+			<width>60</width>
+			<height>60</height>
+			<texture colordiffuse="$VAR[ColorTextVar]" fallback="special://skin/extras/spinners/Sun.png">$INFO[Skin.String(busyloader)]</texture>
+			<aspectratio>keep</aspectratio>
+			<animation center="auto" condition="true" effect="rotate" end="0" loop="true" start="360" time="3000">conditional</animation>
+		</control>
+		<control type="image">
+			<visible>Control.IsVisible(80115) + Container(80115).IsUpdating + ![Control.HasFocus(9010) + !Skin.HasSetting(Enable.PersistentWidgets)]</visible>
+			<animation condition="StringCompare(Skin.String(HomeLayout),2)" effect="slide" end="0,190" start="0,0" time="0">Conditional</animation>
+			<animation condition="StringCompare(Skin.String(HomeLayout),3)" effect="slide" end="221,-382" start="0,0" time="0">Conditional</animation>
+			<description>Busy animation</description>
+			<top>710</top>
+			<left>930</left>
+			<width>60</width>
+			<height>60</height>
+			<texture colordiffuse="$VAR[ColorTextVar]" fallback="special://skin/extras/spinners/Sun.png">$INFO[Skin.String(busyloader)]</texture>
+			<aspectratio>keep</aspectratio>
+			<animation center="auto" condition="true" effect="rotate" end="0" loop="true" start="360" time="3000">conditional</animation>
+		</control>
+		<control type="image">
+			<visible>Control.IsVisible(80116) + Container(80116).IsUpdating + ![Control.HasFocus(9010) + !Skin.HasSetting(Enable.PersistentWidgets)]</visible>
+			<animation condition="StringCompare(Skin.String(HomeLayout),2)" effect="slide" end="0,190" start="0,0" time="0">Conditional</animation>
+			<animation condition="StringCompare(Skin.String(HomeLayout),3)" effect="slide" end="221,-382" start="0,0" time="0">Conditional</animation>
+			<description>Busy animation</description>
+			<top>710</top>
+			<left>930</left>
+			<width>60</width>
+			<height>60</height>
+			<texture colordiffuse="$VAR[ColorTextVar]" fallback="special://skin/extras/spinners/Sun.png">$INFO[Skin.String(busyloader)]</texture>
+			<aspectratio>keep</aspectratio>
+			<animation center="auto" condition="true" effect="rotate" end="0" loop="true" start="360" time="3000">conditional</animation>
+		</control>
+	</include>
+	<variable name="widgetLine1">
+		<value condition="!IsEmpty(Container(8011).ListItem.Episode)">$INFO[Container(8011).ListItem.Season,,x]$INFO[Container(8011).ListItem.Episode,,. ]$INFO[Container(8011).ListItem.Title]</value>
+		<value condition="!IsEmpty(Container(8011).ListItem.Title)">$INFO[Container(8011).ListItem.Title]</value>
+		<value>$INFO[Container(8011).ListItem.Label]</value>
+	</variable>
+	<variable name="widgetLine2">
+		<value condition="!IsEmpty(Container(8011).ListItem.Episode)">• $INFO[Container(8011).ListItem.TvShowTitle]$INFO[Container(8011).ListItem.Premiered, • ]</value>
+		<value condition="!IsEmpty(Container(8011).ListItem.Artist)">• $INFO[Container(8011).ListItem.Artist]$INFO[Container(8011).ListItem.Year, • ]</value>
+		<value condition="!IsEmpty(Container(8011).ListItem.Year)">• $INFO[Container(8011).ListItem.Year]</value>
+		<value condition="!IsEmpty(Container(8011).ListItem.Label2)">• $INFO[Container(8011).ListItem.Label2]</value>
+	</variable>
+	<variable name="widgetLine3">
+		<value condition="!IsEmpty(Container(8011).ListItem.Episode)">$INFO[Container(8011).ListItem.TvShowTitle]$INFO[Container(8011).ListItem.Premiered, • ]</value>
+		<value condition="!IsEmpty(Container(8011).ListItem.Artist)">$INFO[Container(8011).ListItem.Artist]$INFO[Container(8011).ListItem.Year, • ]</value>
+		<value condition="!IsEmpty(Container(8011).ListItem.Year)">$INFO[Container(8011).ListItem.Year]</value>
+		<value>$INFO[Container(8011).ListItem.Label2]</value>
+	</variable>
+</includes>
