@@ -1,4 +1,4 @@
-<h1>mim·ic</h1>
+<h1>mim·ic XS: Adapted for use in cars</h1>
 <code>1. To imitate</code><br />
 <code>Synonyms: resemble, look like, have the appearance of</code>
 
@@ -15,11 +15,11 @@ And finally, all of the users, translators, testers, and fans of Mimic.
 
 Support Kodi by donating @ http://kodi.tv/contribute/donate/
 
-![Home Default] (http://i.imgur.com/5439sGH.jpg)
+![Home Default] (http://i.imgur.com/v4G6fpw.png)
 
-![Home Vertical] (http://i.imgur.com/LBLDthv.jpg)
+![Album selection] (http://i.imgur.com/icXv8CY.png)
 
-More screenshots available here: http://imgur.com/a/LLSMM
+More screenshots available here: http://imgur.com/a/YNxw2
 
 
 ***
