@@ -202,7 +202,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1400</width>
-				<height>300</height>
+				<height>410</height>
 				<texture border="12">dialog_context.png</texture>
 				<colordiffuse>$VAR[ColorDialogVar]</colordiffuse>
 			</control>
@@ -217,7 +217,7 @@
 			</control>
 			<include name="NowPlayingWidgetLabels">
 				<param name="NowPlayingLeft" value="290" />
-				<param name="NowPlayingWidth" value="920" />
+				<param name="NowPlayingWidth" value="1080" />
 				<param name="NowPlayingAlign" value="left" />
 			</include>
 		</control>
@@ -343,7 +343,48 @@
 			<aligny>center</aligny>
 			<scrollout>false</scrollout>
 			<pauseatend>2000</pauseatend>
-			<label>$VAR[TopbarFadeLabel2]</label>
+			<label>$INFO[MusicPlayer.Artist]</label>
 		</control>
+		<control type="fadelabel">
+			<description>Line 3 Label</description>
+			<left>$PARAM[NowPlayingLeft]</left>
+			<top>181</top>
+			<width>$PARAM[NowPlayingWidth]</width>
+			<height>80</height>
+			<font>topbar_title</font>
+			<textcolor>$VAR[ColorTextVar]</textcolor>
+			<align>$PARAM[NowPlayingAlign]</align>
+			<aligny>center</aligny>
+			<scrollout>false</scrollout>
+			<pauseatend>2000</pauseatend>
+			<label>$INFO[MusicPlayer.Album]</label>
+		</control>
+		<control type="progress">
+            <left>$PARAM[NowPlayingLeft]</left>
+            <top>290</top>
+            <width>$PARAM[NowPlayingWidth]</width>
+            <height>35</height>
+            <info>Player.Progress</info>
+            <colordiffuse>$VAR[ColorHighlightVar]</colordiffuse>
+        </control>
+		<control type="label">
+            <description>Time Label</description>
+            <left>$PARAM[NowPlayingLeft]</left>
+            <top>330</top>
+            <height>50</height>
+            <width>$PARAM[NowPlayingWidth]</width>
+            <label>$INFO[Player.Time]</label>
+            <font>font48</font>
+        </control>
+		<control type="label">
+            <description>Time Label</description>
+            <left>$PARAM[NowPlayingLeft]</left>
+            <top>330</top>
+            <height>50</height>
+            <width>$PARAM[NowPlayingWidth]</width>
+            <label>$INFO[Player.Duration]</label>
+			<align>right</align>
+            <font>font48</font>
+        </control>
 	</include>
 </includes>
