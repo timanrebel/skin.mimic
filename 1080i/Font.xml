@@ -163,7 +163,7 @@
 		<font>
 			<name>font35_title</name>
 			<filename>weblysleekuil.ttf</filename>
-			<style>uppercase</style>
+			<style>bold uppercase</style>
 			<size>52</size>
 		</font>
 		<font>
