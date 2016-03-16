@@ -12,7 +12,7 @@
 				<animation effect="fade" tween="cubic" time="600" delay="500" start="0" end="100" reversible="false">Visible</animation>
 				<animation effect="fade" tween="cubic" time="300" start="100" end="0" reversible="false">Hidden</animation>
 				<animation effect="slide" time="0" start="0,0" end="0,-70" condition="[system.getbool(lookandfeel.enablerssfeeds) | Skin.HasSetting(Disable.SubmenuSlide)] + !StringCompare(Skin.String(HomeLayout),2)">Conditional</animation>
-				
+
 				<include condition="!Skin.HasSetting(WidgetStyle) + Skin.HasSetting(HorizontalListNav)">skinshortcuts-template-widget-fixed</include>
 				<include condition="!Skin.HasSetting(WidgetStyle) + !Skin.HasSetting(HorizontalListNav)">skinshortcuts-template-widget-wrapped</include>
 				<include condition="Skin.HasSetting(WidgetStyle)">skinshortcuts-template-widget-defaultpanel</include>
@@ -43,7 +43,7 @@
 				<animation effect="fade" start="0" end="100" time="300" easing="out" condition="ControlGroup(9003).IsVisible + Skin.HasSetting(Enable.PersistentWidgets)">Conditional</animation>
 				<animation effect="fade" start="0" end="100" time="200" easing="out" delay="400" condition="[ControlGroup(9003).HasFocus + !Skin.HasSetting(Enable.PersistentWidgets)] | Skin.HasSetting(Enable.PersistentWidgets)">Conditional</animation>
 				<animation effect="fade" start="100" end="0" time="0" condition="[Control.HasFocus(9000) + !Skin.HasSetting(Enable.PersistentWidgets)]">Conditional</animation>
-				
+
 				<include>skinshortcuts-template-widget-verticalpanel</include>
 
 				<control type="group">
@@ -195,14 +195,14 @@
 			<animation effect="slide" time="0" start="0,0" end="0,120" condition="StringCompare(Skin.String(HomeLayout),2) | Skin.HasSetting(Enable.HomeTopbar)">Conditional</animation>
 			<animation effect="slide" time="300" tween="sine" easing="inout" start="0,0" end="0,140" condition="[Window.IsActive(extendedprogressdialog) | Window.IsActive(busydialog)]">Conditional</animation>
 			<animation effect="slide" time="300" tween="sine" easing="inout" start="0,0" end="0,140" condition="!Skin.HasSetting(Disable.WeatherClockDate) + !Skin.HasSetting(Enable.WeatherInMenu) + [!Skin.HasSetting(Enable.HomeTopbar) | StringCompare(Skin.String(HomeLayout),2)]">Conditional</animation>
-			<left>1090</left>
+			<left>490</left>
 			<top>32</top>
 			<control type="image">
 				<description>background image</description>
 				<left>0</left>
 				<top>0</top>
-				<width>800</width>
-				<height>140</height>
+				<width>1400</width>
+				<height>300</height>
 				<texture border="12">dialog_context.png</texture>
 				<colordiffuse>$VAR[ColorDialogVar]</colordiffuse>
 			</control>
@@ -210,14 +210,14 @@
 				<description>avatar</description>
 				<left>30</left>
 				<top>30</top>
-				<width>80</width>
-				<height>80</height>
+				<width>240</width>
+				<height>240</height>
 				<aspectratio align="center" aligny="center">scale</aspectratio>
 				<texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
 			</control>
 			<include name="NowPlayingWidgetLabels">
-				<param name="NowPlayingLeft" value="130" />
-				<param name="NowPlayingWidth" value="640" />
+				<param name="NowPlayingLeft" value="290" />
+				<param name="NowPlayingWidth" value="920" />
 				<param name="NowPlayingAlign" value="left" />
 			</include>
 		</control>
@@ -322,8 +322,8 @@
 			<left>$PARAM[NowPlayingLeft]</left>
 			<top>27</top>
 			<width>$PARAM[NowPlayingWidth]</width>
-			<height>45</height>
-			<font>font28_title</font>
+			<height>80</height>
+			<font>topbar_title</font>
 			<textcolor>$VAR[ColorTextVar]</textcolor>
 			<align>$PARAM[NowPlayingAlign]</align>
 			<aligny>center</aligny>
@@ -334,10 +334,10 @@
 		<control type="fadelabel">
 			<description>Line 2 Label</description>
 			<left>$PARAM[NowPlayingLeft]</left>
-			<top>69</top>
+			<top>104</top>
 			<width>$PARAM[NowPlayingWidth]</width>
-			<height>45</height>
-			<font>topbar</font>
+			<height>80</height>
+			<font>topbar_title</font>
 			<textcolor>$VAR[ColorHighlightVar]</textcolor>
 			<align>$PARAM[NowPlayingAlign]</align>
 			<aligny>center</aligny>
