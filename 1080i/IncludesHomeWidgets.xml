@@ -202,7 +202,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1400</width>
-				<height>410</height>
+				<height>440</height>
 				<texture border="12">dialog_context.png</texture>
 				<colordiffuse>$VAR[ColorDialogVar]</colordiffuse>
 			</control>
@@ -212,7 +212,7 @@
 				<top>30</top>
 				<width>240</width>
 				<height>240</height>
-				<aspectratio align="center" aligny="center">scale</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
 			</control>
 			<include name="NowPlayingWidgetLabels">
@@ -371,20 +371,20 @@
             <description>Time Label</description>
             <left>$PARAM[NowPlayingLeft]</left>
             <top>330</top>
-            <height>50</height>
+            <height>80</height>
             <width>$PARAM[NowPlayingWidth]</width>
             <label>$INFO[Player.Time]</label>
-            <font>font48</font>
+            <font>topbar_title</font>
         </control>
 		<control type="label">
             <description>Time Label</description>
             <left>$PARAM[NowPlayingLeft]</left>
             <top>330</top>
-            <height>50</height>
+            <height>80</height>
             <width>$PARAM[NowPlayingWidth]</width>
             <label>$INFO[Player.Duration]</label>
 			<align>right</align>
-            <font>font48</font>
+            <font>topbar_title</font>
         </control>
 	</include>
 </includes>
