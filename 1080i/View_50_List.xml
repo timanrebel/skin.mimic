@@ -139,10 +139,10 @@
 						<control type="label">
 							<visible>ListItem.IsPlaying</visible>
 							<left>135</left>
-							<top>5</top>
-							<width>35</width>
+							<top>10</top>
+							<width>50</width>
 							<height>100</height>
-							<font>IconTiny</font>
+							<font>IconMedium</font>
 							<textcolor>$VAR[ColorHighlightVar]</textcolor>
 							<selectedcolor>$VAR[ColorHighlightVar]</selectedcolor>
 							<align>left</align>
@@ -151,10 +151,10 @@
 						</control>
 						<control type="label">
 							<left>135</left>
-							<top>3</top>
+							<top>10</top>
 							<width>790</width>
-							<height>70</height>
-							<font>font30</font>
+							<height>100</height>
+							<font>font35_title</font>
 							<textcolor>$VAR[ColorTextVar]</textcolor>
 							<selectedcolor>$VAR[ColorTextVar]</selectedcolor>
 							<align>left</align>
@@ -164,7 +164,7 @@
 						</control>
 						<control type="label">
 							<left>135</left>
-							<top>3</top>
+							<top>10</top>
 							<width>790</width>
 							<height>100</height>
 							<font>font35_title</font>
@@ -177,7 +177,7 @@
 						</control>
 						<control type="label">
 							<left>135</left>
-							<top>3</top>
+							<top>10</top>
 							<width>790</width>
 							<height>100</height>
 							<font>font35_title</font>
@@ -189,11 +189,11 @@
 							<visible>Container.Content(songs) + !ListItem.IsPlaying</visible>
 						</control>
 						<control type="label">
-							<left>170</left>
-							<top>3</top>
-							<width>755</width>
-							<height>70</height>
-							<font>font30</font>
+							<left>185</left>
+							<top>10</top>
+							<width>790</width>
+							<height>100</height>
+							<font>font35_title</font>
 							<textcolor>$VAR[ColorHighlightVar]</textcolor>
 							<selectedcolor>$VAR[ColorHighlightVar]</selectedcolor>
 							<align>left</align>
@@ -202,8 +202,8 @@
 							<visible>!Container.Content(songs) + ListItem.IsPlaying</visible>
 						</control>
 						<control type="label">
-							<left>175</left>
-							<top>3</top>
+							<left>185</left>
+							<top>10</top>
 							<width>790</width>
 							<height>100</height>
 							<font>font35_title</font>
@@ -214,7 +214,7 @@
 							<label>$VAR[ListMainLabelVar]</label>
 							<visible>Container.Content(songs) + ListItem.IsPlaying</visible>
 						</control>
-						<control type="label">
+						<!-- <control type="label">
 							<left>135</left>
 							<top>52</top>
 							<width>790</width>
@@ -226,7 +226,7 @@
 							<aligny>center</aligny>
 							<label>$VAR[ListSubLabelVar]</label>
 							<visible>!Container.Content(songs) + !Container.Content(albums)</visible>
-						</control>
+						</control> -->
 						<control type="label">
 							<left>60</left>
 							<width>1060</width>
@@ -287,10 +287,10 @@
 						<control type="label">
 							<visible>ListItem.IsPlaying</visible>
 							<left>135</left>
-							<top>5</top>
-							<width>35</width>
+							<top>10</top>
+							<width>50</width>
 							<height>100</height>
-							<font>IconTiny</font>
+							<font>IconMedium</font>
 							<textcolor>$VAR[ColorTextVar]</textcolor>
 							<selectedcolor>$VAR[ColorTextVar]</selectedcolor>
 							<align>left</align>
@@ -298,11 +298,11 @@
 							<label></label>
 						</control>
 						<control type="label">
-							<top>3</top>
+							<top>10</top>
 							<left>135</left>
 							<width>790</width>
-							<height>70</height>
-							<font>font30</font>
+							<height>100</height>
+							<font>font35_title</font>
 							<textcolor>$VAR[ColorTextVar]</textcolor>
 							<selectedcolor>$VAR[ColorTextVar]</selectedcolor>
 							<align>left</align>
@@ -312,7 +312,7 @@
 						</control>
 						<control type="label">
 							<left>135</left>
-							<top>3</top>
+							<top>10</top>
 							<width>790</width>
 							<height>100</height>
 							<font>font35_title</font>
@@ -325,7 +325,7 @@
 						</control>
 						<control type="label">
 							<left>135</left>
-							<top>3</top>
+							<top>10</top>
 							<width>790</width>
 							<height>100</height>
 							<font>font35_title</font>
@@ -337,11 +337,11 @@
 							<visible>Container.Content(songs) + !ListItem.IsPlaying</visible>
 						</control>
 						<control type="label">
-							<top>3</top>
-							<left>170</left>
+							<top>10</top>
+							<left>185</left>
 							<width>755</width>
-							<height>70</height>
-							<font>font30</font>
+							<height>100</height>
+							<font>font35_title</font>
 							<textcolor>$VAR[ColorTextVar]</textcolor>
 							<selectedcolor>$VAR[ColorTextVar]</selectedcolor>
 							<align>left</align>
@@ -350,8 +350,8 @@
 							<visible>!Container.Content(songs) + ListItem.IsPlaying</visible>
 						</control>
 						<control type="label">
-							<left>175</left>
-							<top>3</top>
+							<left>185</left>
+							<top>10</top>
 							<width>790</width>
 							<height>100</height>
 							<font>font35_title</font>
@@ -362,7 +362,7 @@
 							<label>$VAR[ListMainLabelVar]</label>
 							<visible>Container.Content(songs) + ListItem.IsPlaying</visible>
 						</control>
-						<control type="label">
+						<!-- <control type="label">
 							<left>135</left>
 							<top>52</top>
 							<width>790</width>
@@ -374,7 +374,7 @@
 							<aligny>center</aligny>
 							<label>$VAR[ListSubLabelVar]</label>
 							<visible>!Container.Content(songs) + !Container.Content(albums)</visible>
-						</control>
+						</control> -->
 						<control type="label">
 							<left>60</left>
 							<width>1060</width>
@@ -435,10 +435,10 @@
 						<control type="label">
 							<visible>ListItem.IsPlaying</visible>
 							<left>135</left>
-							<top>5</top>
+							<top>10</top>
 							<width>35</width>
 							<height>70</height>
-							<font>IconTiny</font>
+							<font>IconMedium</font>
 							<textcolor>$VAR[ColorTextVar]</textcolor>
 							<selectedcolor>$VAR[ColorTextVar]</selectedcolor>
 							<align>left</align>
@@ -447,7 +447,7 @@
 						</control>
 						<control type="label">
 							<left>135</left>
-							<top>3</top>
+							<top>10</top>
 							<width>1380</width>
 							<height>70</height>
 							<font>font30</font>
@@ -460,7 +460,7 @@
 						</control>
 						<control type="label">
 							<left>170</left>
-							<top>3</top>
+							<top>10</top>
 							<width>1345</width>
 							<height>70</height>
 							<font>font30</font>
@@ -543,10 +543,10 @@
 						<control type="label">
 							<visible>ListItem.IsPlaying</visible>
 							<left>135</left>
-							<top>5</top>
-							<width>35</width>
-							<height>70</height>
-							<font>IconTiny</font>
+							<top>10</top>
+							<width>50</width>
+							<height>100</height>
+							<font>IconMedium</font>
 							<textcolor>$VAR[ColorTextVar]</textcolor>
 							<selectedcolor>$VAR[ColorTextVar]</selectedcolor>
 							<align>left</align>
@@ -554,7 +554,7 @@
 							<label></label>
 						</control>
 						<control type="label">
-							<top>3</top>
+							<top>10</top>
 							<left>135</left>
 							<width>1380</width>
 							<height>70</height>
@@ -567,7 +567,7 @@
 							<visible>!ListItem.IsPlaying</visible>
 						</control>
 						<control type="label">
-							<top>3</top>
+							<top>10</top>
 							<left>170</left>
 							<width>1345</width>
 							<height>70</height>
@@ -632,7 +632,7 @@
 							<top>0</top>
 							<width>35</width>
 							<height>60</height>
-							<font>IconTiny</font>
+							<font>IconMedium</font>
 							<textcolor>$VAR[ColorTextVar]</textcolor>
 							<selectedcolor>$VAR[ColorTextVar]</selectedcolor>
 							<align>left</align>
@@ -704,7 +704,7 @@
 							<top>1</top>
 							<width>35</width>
 							<height>60</height>
-							<font>IconTiny</font>
+							<font>IconMedium</font>
 							<textcolor>$VAR[ColorTextVar]</textcolor>
 							<selectedcolor>$VAR[ColorTextVar]</selectedcolor>
 							<align>left</align>
@@ -776,7 +776,7 @@
 							<top>0</top>
 							<width>35</width>
 							<height>60</height>
-							<font>IconTiny</font>
+							<font>IconMedium</font>
 							<textcolor>$VAR[ColorTextVar]</textcolor>
 							<selectedcolor>$VAR[ColorTextVar]</selectedcolor>
 							<align>left</align>
@@ -848,7 +848,7 @@
 							<top>1</top>
 							<width>35</width>
 							<height>60</height>
-							<font>IconTiny</font>
+							<font>IconMedium</font>
 							<textcolor>$VAR[ColorTextVar]</textcolor>
 							<selectedcolor>$VAR[ColorTextVar]</selectedcolor>
 							<align>left</align>
@@ -947,20 +947,31 @@
 					<control type="label">
 						<visible>Container.Content(songs)</visible>
 						<width>560</width>
-						<height>30</height>
-						<font>font14</font>
+						<height>80</height>
+						<font>font35_title</font>
 						<textcolor>$VAR[ColorTextVar]</textcolor>
 						<label>$INFO[ListItem.Album]</label>
+						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 					</control>
 					<control type="label">
 						<visible>Container.Content(songs)</visible>
 						<width>560</width>
-						<height>30</height>
-						<font>font14</font>
+						<height>80</height>
+						<font>font35_title</font>
 						<textcolor>$VAR[ColorTextVar]</textcolor>
-						<label>$INFO[ListItem.Year]</label>
+						<label>$INFO[ListItem.Artist]</label>
+						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 					</control>
-					<control type="textbox">
+					<control type="label">
+						<visible>Container.Content(albums)</visible>
+						<width>560</width>
+						<height>80</height>
+						<font>font35_title</font>
+						<textcolor>$VAR[ColorTextVar]</textcolor>
+						<label>$INFO[ListItem.Artist]</label>
+						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
+					</control>
+					<!-- <control type="textbox">
 						<visible>Container.Content(musicvideos)</visible>
 						<description>Description</description>
 						<width>560</width>
@@ -988,7 +999,7 @@
 						<textcolor>$VAR[ColorTextVar]</textcolor>
 						<label>$INFO[ListItem.Property(Addon.Description)]</label>
 						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
-					</control>
+					</control> -->
 				</control>
 				<control type="group">
 					<left>1276</left>
