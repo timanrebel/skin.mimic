@@ -182,7 +182,7 @@
 							<top>10</top>
 							<width>100</width>
 							<height>100</height>
-							<font>font35_title</font>
+							<font>car</font>
 							<align>center</align>
 							<label>$INFO[ListItem.Top250]</label>
 						</control>
@@ -209,7 +209,7 @@
 							<top>3</top>
 							<right>80</right>
 							<height>70</height>
-							<font>font30</font>
+							<font>car</font>
 							<label>$VAR[ListMainLabelVar]</label>
 							<visible>!ListItem.IsPlaying</visible>
 						</control>
@@ -218,8 +218,9 @@
 							<top>3</top>
 							<right>80</right>
 							<height>70</height>
-							<font>font30</font>
+							<font>car</font>
 							<label>$VAR[ListMainLabelVar]</label>
+							<textcolor>$VAR[ColorHighlightVar]</textcolor>
 							<visible>ListItem.IsPlaying</visible>
 						</control>
 						<control type="label">
@@ -267,7 +268,7 @@
 							<top>10</top>
 							<width>100</width>
 							<height>100</height>
-							<font>font35_title</font>
+							<font>car</font>
 							<align>center</align>
 							<label>$INFO[ListItem.Top250]</label>
 						</control>
@@ -294,7 +295,7 @@
 							<left>135</left>
 							<right>80</right>
 							<height>70</height>
-							<font>font30</font>
+							<font>car</font>
 							<label>$VAR[ListMainLabelVar]</label>
 							<visible>!ListItem.IsPlaying</visible>
 						</control>
@@ -303,7 +304,7 @@
 							<left>170</left>
 							<right>80</right>
 							<height>70</height>
-							<font>font30</font>
+							<font>car</font>
 							<label>$VAR[ListMainLabelVar]</label>
 							<visible>ListItem.IsPlaying</visible>
 						</control>
@@ -352,7 +353,7 @@
 							<top>10</top>
 							<width>100</width>
 							<height>100</height>
-							<font>font35_title</font>
+							<font>car</font>
 							<align>center</align>
 							<label>$INFO[ListItem.Top250]</label>
 						</control>
@@ -379,7 +380,7 @@
 							<top>3</top>
 							<right>80</right>
 							<height>70</height>
-							<font>font30</font>
+							<font>car</font>
 							<label>$VAR[ListMainLabelVar]</label>
 							<visible>!ListItem.IsPlaying</visible>
 						</control>
@@ -388,7 +389,7 @@
 							<top>3</top>
 							<right>80</right>
 							<height>70</height>
-							<font>font30</font>
+							<font>car</font>
 							<label>$VAR[ListMainLabelVar]</label>
 							<visible>ListItem.IsPlaying</visible>
 						</control>
@@ -437,7 +438,7 @@
 							<top>10</top>
 							<width>100</width>
 							<height>100</height>
-							<font>font35_title</font>
+							<font>car</font>
 							<align>center</align>
 							<label>$INFO[ListItem.Top250]</label>
 						</control>
@@ -464,7 +465,7 @@
 							<left>135</left>
 							<right>80</right>
 							<height>70</height>
-							<font>font30</font>
+							<font>car</font>
 							<label>$VAR[ListMainLabelVar]</label>
 							<visible>!ListItem.IsPlaying</visible>
 						</control>
@@ -473,7 +474,7 @@
 							<left>170</left>
 							<right>80</right>
 							<height>70</height>
-							<font>font30</font>
+							<font>car</font>
 							<label>$VAR[ListMainLabelVar]</label>
 							<visible>ListItem.IsPlaying</visible>
 						</control>
@@ -707,7 +708,7 @@
 							<top>10</top>
 							<width>100</width>
 							<height>100</height>
-							<font>font35_title</font>
+							<font>car</font>
 							<align>center</align>
 							<label>$INFO[ListItem.Top250]</label>
 						</control>
@@ -734,7 +735,7 @@
 							<top>3</top>
 							<right>80</right>
 							<height>70</height>
-							<font>font30</font>
+							<font>car</font>
 							<label>$VAR[ListMainLabelVar]</label>
 							<visible>!ListItem.IsPlaying</visible>
 						</control>
@@ -743,7 +744,7 @@
 							<top>3</top>
 							<right>80</right>
 							<height>70</height>
-							<font>font30</font>
+							<font>car</font>
 							<label>$VAR[ListMainLabelVar]</label>
 							<visible>ListItem.IsPlaying</visible>
 						</control>
@@ -784,7 +785,7 @@
 							<top>10</top>
 							<width>100</width>
 							<height>100</height>
-							<font>font35_title</font>
+							<font>car</font>
 							<align>center</align>
 							<label>$INFO[ListItem.Top250]</label>
 						</control>
@@ -811,7 +812,7 @@
 							<left>135</left>
 							<right>80</right>
 							<height>70</height>
-							<font>font30</font>
+							<font>car</font>
 							<label>$VAR[ListMainLabelVar]</label>
 							<visible>!ListItem.IsPlaying</visible>
 						</control>
@@ -820,7 +821,7 @@
 							<left>170</left>
 							<right>80</right>
 							<height>70</height>
-							<font>font30</font>
+							<font>car</font>
 							<label>$VAR[ListMainLabelVar]</label>
 							<visible>ListItem.IsPlaying</visible>
 						</control>
