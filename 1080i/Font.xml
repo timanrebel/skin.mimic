@@ -113,6 +113,12 @@
 			<size>65</size>
 		</font>
 		<font>
+			<name>car_small</name>
+			<filename>weblysleekuil.ttf</filename>
+			<style>bold</style>
+			<size>55</size>
+		</font>
+		<font>
 			<name>font_MainMenu</name>
 			<filename>weblysleekuil.ttf</filename>
 			<linespacing>0</linespacing>

@@ -1424,4 +1424,20 @@
             <texture colordiffuse="$VAR[ColorBackgroundVar]" border="5">thumbnail_bg.png</texture>
         </control>
     </include>
+	 <include name="ThumbnailItemBackgroundCar">
+    	<control type="image">
+            <left>10</left>
+            <top>10</top>
+            <right>10</right>
+            <bottom>10</bottom>
+            <texture colordiffuse="33787878" border="5">listselect_fo.png</texture>
+        </control>
+        <control type="image">
+            <left>20</left>
+            <top>20</top>
+            <right>20</right>
+            <height>415</height>
+            <texture colordiffuse="$VAR[ColorBackgroundVar]" border="5">thumbnail_bg.png</texture>
+        </control>
+    </include>
 </includes>

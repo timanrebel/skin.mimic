@@ -91,6 +91,11 @@
 			<thumb />
 			<property name="labelID">24001</property>
 			<property name="defaultID">24001</property>
+			<property name="widget">addon</property>
+			<property name="widgetName">10001</property>
+			<property name="widgetType">program</property>
+			<property name="widgetTarget">programs</property>
+			<property name="widgetPath">addons://sources/executable</property>
 			<onclick>ActivateWindow(AddonBrowser)</onclick>
 			<property name="path">ActivateWindow(AddonBrowser)</property>
 			<property name="list">AddonBrowser</property>
@@ -107,6 +112,11 @@
 			<thumb />
 			<property name="labelID">13000</property>
 			<property name="defaultID">13000</property>
+			<property name="widget">settings</property>
+			<property name="widgetName">Settings</property>
+			<property name="widgetType" />
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
 			<onclick>ActivateWindow(Settings)</onclick>
 			<property name="path">ActivateWindow(Settings)</property>
 			<property name="list">Settings</property>
@@ -365,6 +375,11 @@
 			<property name="list">Programs</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-24001)</visible>
 			<property name="group">24001</property>
+			<property name="widget">addon</property>
+			<property name="widgetTarget">programs</property>
+			<property name="widgetPath">addons://sources/executable</property>
+			<property name="widgetType">program</property>
+			<property name="widgetName">10001</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="2">
@@ -381,6 +396,11 @@
 			<property name="list">addons://repos/</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-24001)</visible>
 			<property name="group">24001</property>
+			<property name="widget">addon</property>
+			<property name="widgetTarget">programs</property>
+			<property name="widgetPath">addons://sources/executable</property>
+			<property name="widgetType">program</property>
+			<property name="widgetName">10001</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="1">
@@ -397,6 +417,11 @@
 			<property name="list">Settings</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-13000)</visible>
 			<property name="group">13000</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="2">
@@ -413,6 +438,11 @@
 			<property name="list">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-13000)</visible>
 			<property name="group">13000</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="3">
@@ -429,6 +459,11 @@
 			<property name="list">shutdownmenu</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-13000)</visible>
 			<property name="group">13000</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="1">
@@ -445,6 +480,11 @@
 			<property name="list">PlayerControl(PartyMode)</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),quicknav)</visible>
 			<property name="group">quicknav</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="2">
@@ -461,6 +501,11 @@
 			<property name="list">FileManager</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),quicknav)</visible>
 			<property name="group">quicknav</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="3">
@@ -478,6 +523,11 @@
 			<property name="list">events://</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="group">quicknav</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
@@ -819,6 +869,11 @@
 			<thumb />
 			<property name="labelID">24001</property>
 			<property name="defaultID">24001</property>
+			<property name="widget">addon</property>
+			<property name="widgetName">10001</property>
+			<property name="widgetType">program</property>
+			<property name="widgetTarget">programs</property>
+			<property name="widgetPath">addons://sources/executable</property>
 			<onclick condition="String.IsEqual(Window(10000).Property(submenuVisibility),num-24001)">ActivateWindow(AddonBrowser)</onclick>
 			<property name="path">ActivateWindow(AddonBrowser)</property>
 			<property name="list">AddonBrowser</property>
@@ -842,6 +897,11 @@
 			<property name="list">Programs</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),num-24001)</visible>
 			<property name="group">24001</property>
+			<property name="widget">addon</property>
+			<property name="widgetTarget">programs</property>
+			<property name="widgetPath">addons://sources/executable</property>
+			<property name="widgetType">program</property>
+			<property name="widgetName">10001</property>
 			<property name="isSubmenu">True</property>
 			<property name="submenuVisibility">num-24001</property>
 		</item>
@@ -859,6 +919,11 @@
 			<property name="list">addons://repos/</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),num-24001)</visible>
 			<property name="group">24001</property>
+			<property name="widget">addon</property>
+			<property name="widgetTarget">programs</property>
+			<property name="widgetPath">addons://sources/executable</property>
+			<property name="widgetType">program</property>
+			<property name="widgetName">10001</property>
 			<property name="isSubmenu">True</property>
 			<property name="submenuVisibility">num-24001</property>
 		</item>
@@ -870,6 +935,11 @@
 			<thumb />
 			<property name="labelID">13000</property>
 			<property name="defaultID">13000</property>
+			<property name="widget">settings</property>
+			<property name="widgetName">Settings</property>
+			<property name="widgetType" />
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
 			<onclick condition="String.IsEqual(Window(10000).Property(submenuVisibility),num-13000)">ActivateWindow(Settings)</onclick>
 			<property name="path">ActivateWindow(Settings)</property>
 			<property name="list">Settings</property>
@@ -893,6 +963,11 @@
 			<property name="list">Settings</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),num-13000)</visible>
 			<property name="group">13000</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 			<property name="submenuVisibility">num-13000</property>
 		</item>
@@ -910,6 +985,11 @@
 			<property name="list">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),num-13000)</visible>
 			<property name="group">13000</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 			<property name="submenuVisibility">num-13000</property>
 		</item>
@@ -927,6 +1007,11 @@
 			<property name="list">shutdownmenu</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),num-13000)</visible>
 			<property name="group">13000</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 			<property name="submenuVisibility">num-13000</property>
 		</item>
@@ -1432,6 +1517,11 @@
 			<property name="list">Programs</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="group">24001</property>
+			<property name="widget">addon</property>
+			<property name="widgetTarget">programs</property>
+			<property name="widgetPath">addons://sources/executable</property>
+			<property name="widgetType">program</property>
+			<property name="widgetName">10001</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="2">
@@ -1448,6 +1538,11 @@
 			<property name="list">addons://repos/</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="group">24001</property>
+			<property name="widget">addon</property>
+			<property name="widgetTarget">programs</property>
+			<property name="widgetPath">addons://sources/executable</property>
+			<property name="widgetType">program</property>
+			<property name="widgetName">10001</property>
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
@@ -1466,6 +1561,11 @@
 			<property name="list">Programs</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),num-24001)</visible>
 			<property name="group">24001</property>
+			<property name="widget">addon</property>
+			<property name="widgetTarget">programs</property>
+			<property name="widgetPath">addons://sources/executable</property>
+			<property name="widgetType">program</property>
+			<property name="widgetName">10001</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="2">
@@ -1482,6 +1582,11 @@
 			<property name="list">addons://repos/</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),num-24001)</visible>
 			<property name="group">24001</property>
+			<property name="widget">addon</property>
+			<property name="widgetTarget">programs</property>
+			<property name="widgetPath">addons://sources/executable</property>
+			<property name="widgetType">program</property>
+			<property name="widgetName">10001</property>
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
@@ -1500,6 +1605,11 @@
 			<property name="list">Settings</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="group">13000</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="2">
@@ -1516,6 +1626,11 @@
 			<property name="list">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="group">13000</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="3">
@@ -1532,6 +1647,11 @@
 			<property name="list">shutdownmenu</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="group">13000</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
@@ -1550,6 +1670,11 @@
 			<property name="list">Settings</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),num-13000)</visible>
 			<property name="group">13000</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="2">
@@ -1566,6 +1691,11 @@
 			<property name="list">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),num-13000)</visible>
 			<property name="group">13000</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="3">
@@ -1582,6 +1712,11 @@
 			<property name="list">shutdownmenu</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),num-13000)</visible>
 			<property name="group">13000</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
@@ -1600,6 +1735,11 @@
 			<property name="list">PlayerControl(PartyMode)</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="group">quicknav</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="2">
@@ -1616,6 +1756,11 @@
 			<property name="list">FileManager</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="group">quicknav</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="3">
@@ -1633,6 +1778,11 @@
 			<property name="list">events://</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="group">quicknav</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
@@ -1651,6 +1801,11 @@
 			<property name="list">PlayerControl(PartyMode)</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),quicknav)</visible>
 			<property name="group">quicknav</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="2">
@@ -1667,6 +1822,11 @@
 			<property name="list">FileManager</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),quicknav)</visible>
 			<property name="group">quicknav</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="3">
@@ -1684,6 +1844,11 @@
 			<property name="list">events://</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="group">quicknav</property>
+			<property name="widget">settings</property>
+			<property name="widgetTarget" />
+			<property name="widgetPath" />
+			<property name="widgetType" />
+			<property name="widgetName">Settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
@@ -2888,7 +3053,7 @@
 					<param name="left">494</param>
 					<param name="orientation">vertical</param>
 				</include>
-				<content limit="$VAR[WidgetLimit]" sortby="" sortorder="" target="" />
+				<content limit="$VAR[WidgetLimit]" sortby="" sortorder="" target="programs">addons://sources/executable</content>
 			</control>
 			<control type="group">
 				<include>VisibleFadeEffect</include>
@@ -4585,7 +4750,7 @@
 					<param name="left">85</param>
 					<param name="orientation">horizontal</param>
 				</include>
-				<content limit="$VAR[WidgetLimit]" sortby="" sortorder="" target="" />
+				<content limit="$VAR[WidgetLimit]" sortby="" sortorder="" target="programs">addons://sources/executable</content>
 			</control>
 			<control type="group">
 				<include>VisibleFadeEffect</include>

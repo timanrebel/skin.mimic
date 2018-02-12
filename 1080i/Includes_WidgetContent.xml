@@ -28,20 +28,21 @@
         <scrolltime tween="quadratic" easing="out">300</scrolltime>
         <orientation>$PARAM[orientation]</orientation>
         <visible>!IsEmpty(Container(9000).ListItem.Property(widgetPath)) + !String.IsEqual(Container(9000).ListItem.Property(widget),weather) + !String.IsEqual(Container(9000).ListItem.Property(widget),settings)</visible>
-        <itemlayout height="390" width="350" condition="[String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + ![String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]] | String.IsEmpty(Container(9000).ListItem.Property(widgetIcon))">
-            <include>ThumbnailItemBackground</include>
+        <itemlayout height="525" width="465" condition="[String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + ![String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]] | String.IsEmpty(Container(9000).ListItem.Property(widgetIcon))">
+            <include>ThumbnailItemBackgroundCar</include>
             <control type="label">
                 <left>20</left>
                 <right>20</right>
-                <top>327</top>
+                <top>450</top>
                 <height>50</height>
+                <font>car_small</font>
                 <label>$VAR[WidgetThumbnailLabel]</label>
             </control>
             <control type="image">
                 <left>20</left>
                 <top>20</top>
                 <right>20</right>
-                <height>310</height>
+                <height>415</height>
                 <aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
                 <texture background="true" fallback="DefaultFolder.png" diffuse="diffuse/thumbnail.png">$VAR[WidgetArt]</texture>
             </control>
@@ -49,7 +50,7 @@
                 <top>20</top>
                 <left>20</left>
                 <right>20</right>
-                <height>310</height>
+                <height>415</height>
                 <texture border="5">overlays/diffuse-overlay.png</texture>
             </control>
             <include content="OverlayIcons">
@@ -57,20 +58,21 @@
                 <param name="OverlayTop" value="18" />
             </include>
         </itemlayout>
-        <focusedlayout height="390" width="350" condition="[String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + ![String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]] | String.IsEmpty(Container(9000).ListItem.Property(widgetIcon))">
-            <include>ThumbnailItemBackground</include>
+        <focusedlayout height="525" width="465" condition="[String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + ![String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]] | String.IsEmpty(Container(9000).ListItem.Property(widgetIcon))">
+            <include>ThumbnailItemBackgroundCar</include>
             <control type="label">
                 <left>20</left>
                 <right>20</right>
-                <top>327</top>
+                <top>450</top>
                 <height>50</height>
+                <font>car_small</font>
                 <label>$VAR[WidgetThumbnailLabel]</label>
             </control>
             <control type="image">
                 <left>20</left>
                 <top>20</top>
                 <right>20</right>
-                <height>310</height>
+                <height>415</height>
                 <aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
                 <texture background="true" fallback="DefaultFolder.png" diffuse="diffuse/thumbnail.png">$VAR[WidgetArt]</texture>
             </control>
@@ -80,7 +82,7 @@
                 <top>20</top>
                 <left>20</left>
                 <right>20</right>
-                <height>310</height>
+                <height>415</height>
                 <texture border="5">overlays/diffuse-overlay.png</texture>
             </control>
             <include content="OverlayIcons">
@@ -88,7 +90,7 @@
                 <param name="OverlayTop" value="18" />
             </include>
         </focusedlayout>
-        <itemlayout height="260" width="350" condition="String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20445]) | String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100]) | String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31088]) | [String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + [String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]]">
+        <itemlayout height="260" width="450" condition="String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20445]) | String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100]) | String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31088]) | [String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + [String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]]">
             <control type="image">
                 <left>10</left>
                 <top>10</top>
@@ -140,7 +142,7 @@
                 <param name="OverlayTop" value="18" />
             </include>
         </itemlayout>
-        <focusedlayout height="260" width="350" condition="String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20445]) | String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100]) | String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31088]) | [String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + [String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]]">
+        <focusedlayout height="260" width="450" condition="String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20445]) | String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100]) | String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31088]) | [String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + [String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]]">
             <control type="image">
                 <left>10</left>
                 <top>10</top>
@@ -194,7 +196,7 @@
                 <param name="OverlayTop" value="18" />
             </include>
         </focusedlayout>
-        <itemlayout height="390" width="700" condition="!Skin.HasSetting(Enable.HorizontalMenu) + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])">
+        <itemlayout height="400" width="700" condition="!Skin.HasSetting(Enable.HorizontalMenu) + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])">
             <include>ThumbnailItemBackground</include>
             <control type="label">
                 <left>20</left>
@@ -239,7 +241,7 @@
                 <param name="OverlayTop" value="18" />
             </include>
         </itemlayout>
-        <focusedlayout height="390" width="700" condition="!Skin.HasSetting(Enable.HorizontalMenu) + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])">
+        <focusedlayout height="400" width="700" condition="!Skin.HasSetting(Enable.HorizontalMenu) + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])">
             <include>ThumbnailItemBackground</include>
             <control type="label">
                 <left>20</left>
@@ -287,7 +289,7 @@
                 <param name="OverlayTop" value="18" />
             </include>
         </focusedlayout>
-        <itemlayout height="390" width="875" condition="Skin.HasSetting(Enable.HorizontalMenu) + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])">
+        <itemlayout height="400" width="875" condition="Skin.HasSetting(Enable.HorizontalMenu) + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])">
             <include>ThumbnailItemBackground</include>
             <control type="label">
                 <left>20</left>
@@ -332,7 +334,7 @@
                 <param name="OverlayTop" value="18" />
             </include>
         </itemlayout>
-        <focusedlayout height="390" width="875" condition="Skin.HasSetting(Enable.HorizontalMenu) + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])">
+        <focusedlayout height="400" width="875" condition="Skin.HasSetting(Enable.HorizontalMenu) + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])">
             <include>ThumbnailItemBackground</include>
             <control type="label">
                 <left>20</left>
@@ -384,10 +386,10 @@
     </include>
     <include name="WeatherWidgetContents">
         <visible>String.IsEqual(Container(9000).ListItem.Property(widget),weather) + !IsEmpty(Weather.Plugin)</visible>
-        <top>390</top>
+        <top>400</top>
         <left>$PARAM[left]</left>
         <width>$PARAM[width]</width>
-        <height>390</height>
+        <height>400</height>
         <onleft>9000</onleft>
         <onright>$PARAM[id]</onright>
         <onback>9000</onback>
@@ -398,7 +400,7 @@
         <viewtype label="21371">list</viewtype>
         <scrolltime tween="quadratic" easing="out">300</scrolltime>
         <orientation>horizontal</orientation>
-        <itemlayout height="390" width="350">
+        <itemlayout height="400" width="350">
             <include>ThumbnailItemBackground</include>
             <control type="label">
                 <left>20</left>
@@ -444,7 +446,7 @@
             </control>
         </itemlayout>
 
-        <focusedlayout height="390" width="350">
+        <focusedlayout height="400" width="350">
             <include>ThumbnailItemBackground</include>
             <control type="label">
                 <left>20</left>
@@ -642,7 +644,7 @@
                 <texture border="5">overlays/diffuse-overlay.png</texture>
             </control>
         </focusedlayout>
-        <itemlayout height="390" width="350" condition="Skin.HasSetting(Enable.HorizontalMenu)">
+        <itemlayout height="400" width="350" condition="Skin.HasSetting(Enable.HorizontalMenu)">
             <control type="image">
                 <left>10</left>
                 <top>10</top>
@@ -680,7 +682,7 @@
                 <texture border="5">overlays/diffuse-overlay.png</texture>
             </control>
         </itemlayout>
-        <focusedlayout height="390" width="350" condition="Skin.HasSetting(Enable.HorizontalMenu)">
+        <focusedlayout height="400" width="350" condition="Skin.HasSetting(Enable.HorizontalMenu)">
             <control type="image">
                 <left>10</left>
                 <top>10</top>
