@@ -1862,22 +1862,22 @@
 		<control type="group">
 			<visible>![Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-lazytv-main.xml) | Window.IsVisible(script-lazytv-BigScreenList.xml) | Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation) | Window.IsVisible(songinformation) | Window.IsActive(addoninformation)]</visible>
 			<include>Animation.Common</include>
-			<top>210</top>
+			<top>140</top>
 			<control type="image">
 				<visible>Control.HasFocus(80111) + !Container(80111).IsUpdating + [[String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + ![String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]] | String.IsEmpty(Container(9000).ListItem.Property(widgetIcon))]</visible>
 				<animation delay="200" effect="fade" time="320">Visible</animation>
 				<animation effect="fade" time="200">Hidden</animation>
 				<left>504</left>
 				<top>10</top>
-				<width>330</width>
-				<height>370</height>
+				<width>450</width>
+				<height>510</height>
 				<include>FocusedBackgroundFade</include>
 				<texture border="5" colordiffuse="$VAR[ColorHighlightVar]">listselect_fo.png</texture>
 				<animation condition="Integer.IsGreater(Container(80111).Row,0)" easing="inout" effect="slide" end="0,390" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80111).Column,3)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80111).Column,2)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80111).Column,1)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80111).Column,0)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80111).Column,3)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80111).Column,2)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80111).Column,1)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80111).Column,0)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
 			</control>
 			<control type="image">
 				<visible>Control.HasFocus(80111) + !Container(80111).IsUpdating + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])</visible>
@@ -2145,22 +2145,22 @@
 		<control type="group">
 			<visible>![Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-lazytv-main.xml) | Window.IsVisible(script-lazytv-BigScreenList.xml) | Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation) | Window.IsVisible(songinformation) | Window.IsActive(addoninformation)]</visible>
 			<include>Animation.Common</include>
-			<top>210</top>
+			<top>140</top>
 			<control type="image">
 				<visible>Control.HasFocus(80112) + !Container(80112).IsUpdating + [[String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + ![String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]] | String.IsEmpty(Container(9000).ListItem.Property(widgetIcon))]</visible>
 				<animation delay="200" effect="fade" time="320">Visible</animation>
 				<animation effect="fade" time="200">Hidden</animation>
 				<left>504</left>
 				<top>10</top>
-				<width>330</width>
-				<height>370</height>
+				<width>450</width>
+				<height>510</height>
 				<include>FocusedBackgroundFade</include>
 				<texture border="5" colordiffuse="$VAR[ColorHighlightVar]">listselect_fo.png</texture>
 				<animation condition="Integer.IsGreater(Container(80112).Row,0)" easing="inout" effect="slide" end="0,390" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80112).Column,3)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80112).Column,2)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80112).Column,1)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80112).Column,0)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80112).Column,3)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80112).Column,2)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80112).Column,1)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80112).Column,0)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
 			</control>
 			<control type="image">
 				<visible>Control.HasFocus(80112) + !Container(80112).IsUpdating + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])</visible>
@@ -2428,22 +2428,22 @@
 		<control type="group">
 			<visible>![Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-lazytv-main.xml) | Window.IsVisible(script-lazytv-BigScreenList.xml) | Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation) | Window.IsVisible(songinformation) | Window.IsActive(addoninformation)]</visible>
 			<include>Animation.Common</include>
-			<top>210</top>
+			<top>140</top>
 			<control type="image">
 				<visible>Control.HasFocus(80113) + !Container(80113).IsUpdating + [[String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + ![String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]] | String.IsEmpty(Container(9000).ListItem.Property(widgetIcon))]</visible>
 				<animation delay="200" effect="fade" time="320">Visible</animation>
 				<animation effect="fade" time="200">Hidden</animation>
 				<left>504</left>
 				<top>10</top>
-				<width>330</width>
-				<height>370</height>
+				<width>450</width>
+				<height>510</height>
 				<include>FocusedBackgroundFade</include>
 				<texture border="5" colordiffuse="$VAR[ColorHighlightVar]">listselect_fo.png</texture>
 				<animation condition="Integer.IsGreater(Container(80113).Row,0)" easing="inout" effect="slide" end="0,390" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80113).Column,3)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80113).Column,2)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80113).Column,1)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80113).Column,0)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80113).Column,3)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80113).Column,2)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80113).Column,1)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80113).Column,0)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
 			</control>
 			<control type="image">
 				<visible>Control.HasFocus(80113) + !Container(80113).IsUpdating + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])</visible>
@@ -2711,22 +2711,22 @@
 		<control type="group">
 			<visible>![Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-lazytv-main.xml) | Window.IsVisible(script-lazytv-BigScreenList.xml) | Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation) | Window.IsVisible(songinformation) | Window.IsActive(addoninformation)]</visible>
 			<include>Animation.Common</include>
-			<top>210</top>
+			<top>140</top>
 			<control type="image">
 				<visible>Control.HasFocus(80114) + !Container(80114).IsUpdating + [[String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + ![String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]] | String.IsEmpty(Container(9000).ListItem.Property(widgetIcon))]</visible>
 				<animation delay="200" effect="fade" time="320">Visible</animation>
 				<animation effect="fade" time="200">Hidden</animation>
 				<left>504</left>
 				<top>10</top>
-				<width>330</width>
-				<height>370</height>
+				<width>450</width>
+				<height>510</height>
 				<include>FocusedBackgroundFade</include>
 				<texture border="5" colordiffuse="$VAR[ColorHighlightVar]">listselect_fo.png</texture>
 				<animation condition="Integer.IsGreater(Container(80114).Row,0)" easing="inout" effect="slide" end="0,390" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80114).Column,3)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80114).Column,2)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80114).Column,1)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80114).Column,0)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80114).Column,3)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80114).Column,2)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80114).Column,1)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80114).Column,0)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
 			</control>
 			<control type="image">
 				<visible>Control.HasFocus(80114) + !Container(80114).IsUpdating + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])</visible>
@@ -2994,22 +2994,22 @@
 		<control type="group">
 			<visible>![Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-lazytv-main.xml) | Window.IsVisible(script-lazytv-BigScreenList.xml) | Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation) | Window.IsVisible(songinformation) | Window.IsActive(addoninformation)]</visible>
 			<include>Animation.Common</include>
-			<top>210</top>
+			<top>140</top>
 			<control type="image">
 				<visible>Control.HasFocus(80115) + !Container(80115).IsUpdating + [[String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + ![String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]] | String.IsEmpty(Container(9000).ListItem.Property(widgetIcon))]</visible>
 				<animation delay="200" effect="fade" time="320">Visible</animation>
 				<animation effect="fade" time="200">Hidden</animation>
 				<left>504</left>
 				<top>10</top>
-				<width>330</width>
-				<height>370</height>
+				<width>450</width>
+				<height>510</height>
 				<include>FocusedBackgroundFade</include>
 				<texture border="5" colordiffuse="$VAR[ColorHighlightVar]">listselect_fo.png</texture>
 				<animation condition="Integer.IsGreater(Container(80115).Row,0)" easing="inout" effect="slide" end="0,390" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80115).Column,3)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80115).Column,2)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80115).Column,1)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80115).Column,0)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80115).Column,3)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80115).Column,2)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80115).Column,1)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80115).Column,0)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
 			</control>
 			<control type="image">
 				<visible>Control.HasFocus(80115) + !Container(80115).IsUpdating + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])</visible>
@@ -3277,22 +3277,22 @@
 		<control type="group">
 			<visible>![Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-lazytv-main.xml) | Window.IsVisible(script-lazytv-BigScreenList.xml) | Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation) | Window.IsVisible(songinformation) | Window.IsActive(addoninformation)]</visible>
 			<include>Animation.Common</include>
-			<top>210</top>
+			<top>140</top>
 			<control type="image">
 				<visible>Control.HasFocus(80116) + !Container(80116).IsUpdating + [[String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + ![String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]] | String.IsEmpty(Container(9000).ListItem.Property(widgetIcon))]</visible>
 				<animation delay="200" effect="fade" time="320">Visible</animation>
 				<animation effect="fade" time="200">Hidden</animation>
 				<left>504</left>
 				<top>10</top>
-				<width>330</width>
-				<height>370</height>
+				<width>450</width>
+				<height>510</height>
 				<include>FocusedBackgroundFade</include>
 				<texture border="5" colordiffuse="$VAR[ColorHighlightVar]">listselect_fo.png</texture>
 				<animation condition="Integer.IsGreater(Container(80116).Row,0)" easing="inout" effect="slide" end="0,390" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80116).Column,3)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80116).Column,2)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80116).Column,1)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
-				<animation condition="Integer.IsGreater(Container(80116).Column,0)" easing="inout" effect="slide" end="350,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80116).Column,3)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80116).Column,2)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80116).Column,1)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
+				<animation condition="Integer.IsGreater(Container(80116).Column,0)" easing="inout" effect="slide" end="465,0" time="300" tween="cubic">Conditional</animation>
 			</control>
 			<control type="image">
 				<visible>Control.HasFocus(80116) + !Container(80116).IsUpdating + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])</visible>
@@ -3673,7 +3673,7 @@
 				<animation effect="fade" time="200">Hidden</animation>
 				<left>95</left>
 				<top>400</top>
-				<width>330</width>
+				<width>450</width>
 				<height>370</height>
 				<include>FocusedBackgroundFade</include>
 				<texture border="5" colordiffuse="$VAR[ColorHighlightVar]">listselect_fo.png</texture>
@@ -3955,7 +3955,7 @@
 				<animation effect="fade" time="200">Hidden</animation>
 				<left>95</left>
 				<top>400</top>
-				<width>330</width>
+				<width>450</width>
 				<height>370</height>
 				<include>FocusedBackgroundFade</include>
 				<texture border="5" colordiffuse="$VAR[ColorHighlightVar]">listselect_fo.png</texture>
@@ -4237,7 +4237,7 @@
 				<animation effect="fade" time="200">Hidden</animation>
 				<left>95</left>
 				<top>400</top>
-				<width>330</width>
+				<width>450</width>
 				<height>370</height>
 				<include>FocusedBackgroundFade</include>
 				<texture border="5" colordiffuse="$VAR[ColorHighlightVar]">listselect_fo.png</texture>
@@ -4519,7 +4519,7 @@
 				<animation effect="fade" time="200">Hidden</animation>
 				<left>95</left>
 				<top>400</top>
-				<width>330</width>
+				<width>450</width>
 				<height>370</height>
 				<include>FocusedBackgroundFade</include>
 				<texture border="5" colordiffuse="$VAR[ColorHighlightVar]">listselect_fo.png</texture>
@@ -4801,7 +4801,7 @@
 				<animation effect="fade" time="200">Hidden</animation>
 				<left>95</left>
 				<top>400</top>
-				<width>330</width>
+				<width>450</width>
 				<height>370</height>
 				<include>FocusedBackgroundFade</include>
 				<texture border="5" colordiffuse="$VAR[ColorHighlightVar]">listselect_fo.png</texture>
@@ -5083,7 +5083,7 @@
 				<animation effect="fade" time="200">Hidden</animation>
 				<left>95</left>
 				<top>400</top>
-				<width>330</width>
+				<width>450</width>
 				<height>370</height>
 				<include>FocusedBackgroundFade</include>
 				<texture border="5" colordiffuse="$VAR[ColorHighlightVar]">listselect_fo.png</texture>

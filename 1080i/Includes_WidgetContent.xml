@@ -16,7 +16,7 @@
     <include name="WidgetContents">
         <left>$PARAM[left]</left>
         <width>$PARAM[width]</width>
-        <height>780</height>
+        <height>910</height>
         <onup>$PARAM[onup]</onup>
         <ondown>$PARAM[ondown]</ondown>
         <onleft>$PARAM[onleft]</onleft>
@@ -26,7 +26,7 @@
         <preloaditems>2</preloaditems>
         <viewtype label="21371">list</viewtype>
         <scrolltime tween="quadratic" easing="out">300</scrolltime>
-        <orientation>$PARAM[orientation]</orientation>
+        <orientation>vertical</orientation>
         <visible>!IsEmpty(Container(9000).ListItem.Property(widgetPath)) + !String.IsEqual(Container(9000).ListItem.Property(widget),weather) + !String.IsEqual(Container(9000).ListItem.Property(widget),settings)</visible>
         <itemlayout height="525" width="465" condition="[String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + ![String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]] | String.IsEmpty(Container(9000).ListItem.Property(widgetIcon))">
             <include>ThumbnailItemBackgroundCar</include>
